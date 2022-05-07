@@ -66,7 +66,7 @@ img {
   text-align: center;
   color: rgb(74, 74, 74);
   border-radius: 100px;
-    margin: 30 auto;
+    margin: 0 auto;
     padding: 14px 5px;
     width: 180px;
     background-color: #e7f9ff;
@@ -602,7 +602,6 @@ img {
     width: 150px;
     margin: 0 auto;
     margin-bottom: 25px;
-    
   }
 
   .profile-body p {
