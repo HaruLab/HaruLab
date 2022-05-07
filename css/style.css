@@ -10,6 +10,7 @@ a {
   transition: opacity .3s;
   text-decoration: none;
   color: #1ca9e3;
+  text-align: center;
 }
 
 img {
@@ -58,13 +59,14 @@ img {
 -------------------------c--------*/
 .title {
   
+  
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 40px;
   text-align: center;
   color: rgb(74, 74, 74);
   border-radius: 100px;
-    margin: 0 auto;
+    margin: 30 auto;
     padding: 14px 5px;
     width: 180px;
     background-color: #e7f9ff;
@@ -280,7 +282,7 @@ img {
  Skill
 ---------------------------------*/
 .skill-list {
-  padding-top: 20px;
+  padding-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -476,13 +478,14 @@ img {
   /* 見出し */
   .title {
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .lead {
     font-size: 14px;
     line-height: 1.7;
     margin-bottom: 20px;
+    padding-top: 20px;
   }
 
   /* レイアウト */
@@ -599,6 +602,7 @@ img {
     width: 150px;
     margin: 0 auto;
     margin-bottom: 25px;
+    
   }
 
   .profile-body p {
