@@ -85,27 +85,27 @@ header {
 .price {
   display: block;
   align-items: center;
-  max-width: 700px;
+  max-width: 80%;
   margin: 0 auto;
   padding-bottom: 80px;
 }
 
 .price h1 {
-  font-size: 25px;
+  font-size: 20px;
   color: #ffffff;
   padding: 35px 30px;
 }
 
 .price p {
   margin: 10px 30px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 
 
 .price li {
   margin: 20px 0px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 
