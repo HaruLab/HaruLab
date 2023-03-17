@@ -1,0 +1,199 @@
+/* 全体の設定 */
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5px;
+  letter-spacing: 0.2em;
+  background-color: #161616;
+  color: #ffffff;
+  line-height: 20px;
+  align-items: center;
+}
+
+
+/* リンクの設定 */
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+
+/* ヘッダーの設定 */
+
+header {
+  font-size: 15px;
+  font-family: "Futura", Helvetica, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 40px;
+}
+
+
+/* コンテナの設定 */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ロゴの設定 */
+
+.logo {
+  font-family: "Futura", Helvetica, sans-serif;
+  margin-right: 5%;
+}
+
+
+/* メニューの設定 */
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 20px;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.works h1{
+
+  text-align:  center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding-top: 50px;
+
+}
+
+.price {
+  display: block;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.price h1 {
+  font-size: 20px;
+  color: #ffffff;
+  padding: 35px 30px;
+}
+
+.price p {
+  margin: 10px 30px;
+  font-size: 10px;
+}
+
+
+
+.price li {
+  margin: 20px 0px;
+  font-size: 10px;
+}
+
+
+/* カード型レイアウトの設定 */
+
+.card-container {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  /* 中央寄せ */
+  align-items: center;
+  text-align: left;
+  /* 中央寄せ */
+  max-width: 800px;
+  /* 最大幅 */
+  margin: 0 auto;
+  /* 中央寄せ */
+}
+
+.card {
+  width: calc(100% / 3 - 20px);
+  /* 最大3列 */
+  margin: 10px;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Futura", Helvetica, sans-serif;
+  transition: transform 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #ffffff33;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h2 {
+  font-size: 8px;
+  padding-top: 5%;
+}
+
+.card p {
+  padding-bottom: 5%;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: calc(100% / 2 - 20px);
+    /* 最大2列 */
+    justify-content: center;
+  }
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sns-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns-links a {
+  color: #ffffff;
+  font-size: 10px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.credit {
+  color: #ffffff;
+  font-size: 5px;
+  margin-bottom: 20px;
+}
