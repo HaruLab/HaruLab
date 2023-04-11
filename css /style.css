@@ -94,7 +94,7 @@ header {
 .price {
   display: block;
   align-items: center;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
   padding-bottom: 80px;
 }
