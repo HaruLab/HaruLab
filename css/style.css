@@ -1,16 +1,17 @@
-/* 全体の設定 */
+
 
 body {
   margin: 0;
   padding: 0;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-size: 5px;
-  letter-spacing: 0.2em;
-  background-color: #161616;
-  color: #ffffff;
+  font-size: 6px;
+  letter-spacing: 0.3em;
+  background-color: #ffffff;
+  color: #666565;
   line-height: 20px;
   align-items: center;
+  
 }
 
 
@@ -18,18 +19,19 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #666565;
   transition: opacity 0.3s ease;
 }
 
 a:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 
 /* ヘッダーの設定 */
 
 header {
+  
   font-size: 15px;
   font-family: "Futura", Helvetica, sans-serif;
   position: fixed;
@@ -38,6 +40,8 @@ header {
   right: 0;
   z-index: 10;
   height: 40px;
+  
+  
 }
 
 
@@ -49,6 +53,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  background: rgba( 255, 255, 255, 0 );
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
+  border: 1px solid rgba(255, 255, 255, 0.027);
 }
 
 
@@ -56,7 +65,7 @@ header {
 
 .logo {
   font-family: "Futura", Helvetica, sans-serif;
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 
@@ -70,13 +79,13 @@ header {
 }
 
 .menu li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .works h1{
 
   text-align:  center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 20px auto;
   padding-top: 50px;
 
@@ -85,27 +94,28 @@ header {
 .price {
   display: block;
   align-items: center;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   padding-bottom: 80px;
 }
 
 .price h1 {
   font-size: 20px;
-  color: #ffffff;
-  padding: 35px 30px;
+  color: #4a4a4a;
+  padding: 35px 10px;
 }
 
 .price p {
-  margin: 10px 30px;
-  font-size: 10px;
+  margin: 20px 10px;
+  padding: 3px;
+  font-size: 11px;
 }
 
 
 
 .price li {
-  margin: 20px 0px;
-  font-size: 10px;
+  margin: 15px -18px;
+  font-size: 12px;
 }
 
 
@@ -120,7 +130,7 @@ header {
   align-items: center;
   text-align: left;
   /* 中央寄せ */
-  max-width: 800px;
+  max-width: 700px;
   /* 最大幅 */
   margin: 0 auto;
   /* 中央寄せ */
@@ -130,8 +140,8 @@ header {
   width: calc(100% / 3 - 20px);
   /* 最大3列 */
   margin: 10px;
-  background-color: #1a1a1a;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5%;
   overflow: hidden;
   text-align: center;
@@ -141,7 +151,7 @@ header {
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 50px #ffffff33;
+  box-shadow: 0 0 1000px #ffffff0f;
 }
 
 .card img {
@@ -159,11 +169,14 @@ header {
   padding-bottom: 5%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .card {
     width: calc(100% / 2 - 20px);
     /* 最大2列 */
     justify-content: center;
+    max-width: 50%;
+
+
   }
 }
 
@@ -177,6 +190,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .sns-links {
@@ -186,14 +200,35 @@ footer {
 }
 
 .sns-links a {
-  color: #ffffff;
-  font-size: 10px;
+  color: #000000;
+  font-size: 9px;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .credit {
   color: #ffffff;
   font-size: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1d1c1c;
+    color: #ffffff;
+    }
+    .card{
+      background-color: #222121;
+    }
+    a{
+      color: #ffffff;
+    }
+    .price h1{
+      color: #ffffff;
+    }
+    .sns-links a {
+      color: #ffffff;
+    }
 }
