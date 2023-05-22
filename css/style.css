@@ -1,6 +1,9 @@
 
 
 body {
+  
+  
+
   margin: 0;
   padding: 0;
   position: relative;
@@ -31,6 +34,7 @@ a:hover {
 /* ヘッダーの設定 */
 
 header {
+  
   
   font-size: 15px;
   font-family: "Futura", Helvetica, sans-serif;
@@ -69,7 +73,20 @@ header {
 }
 
 
-/* メニューの設定 */
+
+.reel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
+
+}
+
+.reel iframe{
+  max-width: 90%
+}
+
 
 .menu ul {
   list-style: none;
@@ -82,40 +99,41 @@ header {
   margin-right: 10px;
 }
 
-.works h1{
-
-  text-align:  center;
-  max-width: 700px;
-  margin: 20px auto;
-  padding-top: 50px;
-
+span{
+  background-color: #ff9;
 }
 
 .price {
-  display: block;
-  align-items: center;
-  max-width: 85%;
+  font-family: "Futura", Helvetica, sans-serif;
+  max-width: 80%;
+  text-align: center;
   margin: 0 auto;
-  padding-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  font-size: 10px;
+  line-height: 2;
 }
 
 .price h1 {
+  text-align: left;
   font-size: 20px;
-  color: #4a4a4a;
-  padding: 35px 10px;
+  font-weight: bold;
 }
 
 .price p {
-  margin: 20px 10px;
-  padding: 3px;
+  text-align: left;
   font-size: 10px;
+  line-height: 2;
 }
 
-
-
 .price li {
-  margin: 15px -18px;
+  text-align: left;
+  margin-left: -30px;
   font-size: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  line-height: 3;
+  
 }
 
 
@@ -161,6 +179,7 @@ header {
 }
 
 .card h2 {
+  
   font-size: 8px;
   padding-top: 5%;
 }
@@ -174,7 +193,7 @@ header {
     width: calc(100% / 2 - 20px);
     /* 最大2列 */
     justify-content: center;
-    max-width: 50%;
+    max-width: 80%;
 
 
   }
@@ -215,6 +234,7 @@ footer {
 
 
 @media (prefers-color-scheme: dark) {
+  
   body {
     background-color: #1d1c1c;
     color: #ffffff;
@@ -232,3 +252,6 @@ footer {
       color: #ffffff;
     }
 }
+
+
+
