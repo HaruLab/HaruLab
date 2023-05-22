@@ -84,7 +84,7 @@ header {
 }
 
 .reel iframe{
-  max-width: 80%
+  max-width: 90%
 }
 
 
@@ -155,7 +155,7 @@ span{
   align-items: center;
   text-align: left;
   /* 中央寄せ */
-  max-width: 80%;
+  max-width: 90%;
   /* 最大幅 */
   margin: 0 auto;
   /* 中央寄せ */
@@ -188,7 +188,7 @@ span{
 .card h2 {
   line-height: 2;
   text-align: left;
-  font-size: 8px;
+  font-size: 6px;
   padding: 0px 10px;
 }
 
@@ -196,7 +196,7 @@ span{
 .card p{
   text-align: left;
   padding: 0px 10px;
-  font-size: 6px;
+  font-size: 5px;
 }
 @media screen and (max-width: 800px) {
   .card {
@@ -267,3 +267,17 @@ footer {
 
 
 
+#js-mouse {
+  pointer-events: none;
+  position: fixed;
+  top: -15px; 
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  background-color:rgba(0,0,102,0.5);
+  border-radius: 50%;
+  transform: translate(0,0);
+  transition: transform 0.3s ease-out;
+  z-index: 9999;
+  opacity: 0;
+}
