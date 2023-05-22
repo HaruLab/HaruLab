@@ -8,7 +8,7 @@ body {
   padding: 0;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-size: 6px;
+  font-size: 2px;
   letter-spacing: 0.3em;
   background-color: #ffffff;
   color: #666565;
@@ -84,7 +84,7 @@ header {
 }
 
 .reel iframe{
-  max-width: 90%
+  max-width: 80%
 }
 
 
@@ -100,22 +100,26 @@ header {
 }
 
 span{
-  background-color: #ff9;
+  background-color: rgb(73, 73, 52);
 }
 
 .price {
   font-family: "Futura", Helvetica, sans-serif;
+  
   max-width: 80%;
   text-align: center;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 50px;
   padding-bottom: 100px;
   font-size: 10px;
   line-height: 2;
 }
 
 .price h1 {
-  text-align: left;
+  
+  background-color: #91919128;
+  padding: 20px;
+  border-radius:50px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -123,7 +127,8 @@ span{
 .price p {
   text-align: left;
   font-size: 10px;
-  line-height: 2;
+  line-height: 3;
+
 }
 
 .price li {
@@ -133,6 +138,8 @@ span{
   line-height: 1.5;
   border-radius: 5px;
   line-height: 3;
+  /*点を消す*/
+  list-style:none
   
 }
 
@@ -140,7 +147,7 @@ span{
 /* カード型レイアウトの設定 */
 
 .card-container {
-  
+  padding-bottom: 00px;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
@@ -148,7 +155,7 @@ span{
   align-items: center;
   text-align: left;
   /* 中央寄せ */
-  max-width: 700px;
+  max-width: 80%;
   /* 最大幅 */
   margin: 0 auto;
   /* 中央寄せ */
@@ -159,8 +166,8 @@ span{
   /* 最大3列 */
   margin: 10px;
   background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5%;
+  box-shadow: 0 0 10px rgba(129, 129, 129, 0.2);
+  border-radius: 10px;
   overflow: hidden;
   text-align: center;
   font-family: "Futura", Helvetica, sans-serif;
@@ -168,8 +175,8 @@ span{
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 1000px #ffffff0f;
+  transform: scale(1.06);
+  box-shadow: 0 0 100px #ffffff0f;
 }
 
 .card img {
@@ -179,15 +186,18 @@ span{
 }
 
 .card h2 {
-  
+  line-height: 2;
+  text-align: left;
   font-size: 8px;
-  padding-top: 5%;
+  padding: 0px 10px;
 }
 
-.card p {
-  padding-bottom: 5%;
-}
 
+.card p{
+  text-align: left;
+  padding: 0px 10px;
+  font-size: 6px;
+}
 @media screen and (max-width: 800px) {
   .card {
     width: calc(100% / 2 - 20px);
@@ -252,6 +262,8 @@ footer {
       color: #ffffff;
     }
 }
+
+
 
 
 
