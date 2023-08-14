@@ -43,6 +43,12 @@ a:hover {
   animation: pulse 2s infinite alternate; /* アニメーションを適用 */
 }
 
+@media (max-width: 500px) { /* スマートフォンの幅以下の場合 */
+  .stalker {
+    display: none; /* マウスストーカーを非表示にする */
+  }
+}
+
 @keyframes pulse {
   from {
     width: 15px; /* 初期の大きさ */
