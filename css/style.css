@@ -179,7 +179,7 @@ span {
   max-width: 95%;
   text-align: center;
   margin: 0 auto;
-  padding-top: 70px;
+  padding-top: 100px;
   font-size: 10px;
   line-height: 1.5;
   margin-bottom: 100px;
@@ -268,12 +268,10 @@ span {
   
   background-color: #7979791a;
   border-radius: 20px;
-  padding: 40px 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding: 20px 10px;
   display: grid;
   /* グリッドレイアウト */
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(3px, 0.3fr));
   /* 幅が広くなると2列に変化 */
 }
 
