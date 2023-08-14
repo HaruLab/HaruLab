@@ -18,13 +18,13 @@ body {
 a {
   text-decoration: none;
   color: #3e3e3e;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
   background-color: #00000076;
-  padding: 8px 15px;
+  padding: 8px 8px;
   border-radius: 50px;
   background: rgba(54, 54, 54, 0);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
 }
 
