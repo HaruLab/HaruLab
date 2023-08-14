@@ -76,19 +76,6 @@ header {
 
 
 
-.reel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 40px;
-
-}
-
-.reel iframe {
-  max-width: 85%
-}
-
-
 .menu ul {
   list-style: none;
   display: flex;
@@ -184,7 +171,7 @@ span {
   margin: 0 auto;
   padding-top: 70px;
   font-size: 10px;
-  line-height: 2;
+  line-height: 1.5;
   margin-bottom: 100px;
 }
 
@@ -225,9 +212,8 @@ span {
 .price li {
   text-align: left;
   margin-left: -30px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
-  border-radius: 5px;
   line-height: 3;
   /* 点を消す */
   list-style: none;
