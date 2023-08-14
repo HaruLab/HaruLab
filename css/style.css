@@ -3,7 +3,7 @@ body {
   padding: 0;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-size: 2px;
+  font-size: 5px;
   letter-spacing: 0.3em;
   background-color: #eeeeee;
   color: #666565;
@@ -19,12 +19,6 @@ a {
   text-decoration: none;
   color: #3e3e3e;
   transition: opacity 0.5s ease;
-  background-color: #00000076;
-  padding: 8px 8px;
-  border-radius: 50px;
-  background: rgba(54, 54, 54, 0);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 
 }
 
@@ -38,7 +32,7 @@ a:hover {
 
 header {
 
-  font-size: 17px;
+  font-size: 14px;
   font-family: "Futura", Helvetica, sans-serif;
   position: fixed;
   top: 0;
@@ -194,7 +188,7 @@ span {
   margin-bottom: 100px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
   .price {
     grid-template-columns: repeat(1, 1fr);/
   }
