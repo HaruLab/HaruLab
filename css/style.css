@@ -5,7 +5,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 2px;
   letter-spacing: 0.3em;
-  background-color: #f5f5f5;
+  background-color: #eeeeee;
   color: #666565;
   line-height: 20px;
   align-items: center;
@@ -19,6 +19,12 @@ a {
   text-decoration: none;
   color: #3e3e3e;
   transition: opacity 0.3s ease;
+  background-color: #00000076;
+  padding: 8px 15px;
+  border-radius: 50px;
+  background: rgba(54, 54, 54, 0);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 
 }
 
@@ -54,8 +60,8 @@ header {
   justify-content: space-between;
 
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(0, 0, 0, 0.048);
 }
 
@@ -179,10 +185,10 @@ span {
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);/ font-family: "Futura", Helvetica, sans-serif;
-  max-width: 87%;
+  max-width: 95%;
   text-align: center;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 70px;
   font-size: 10px;
   line-height: 2;
   margin-bottom: 100px;
@@ -197,8 +203,7 @@ span {
 
 
 .price h1 {
-
-  background-color: #91919128;
+  background-color: #91919162;
   padding: 10px;
   border-radius: 50px;
   font-size: 20px;
@@ -317,15 +322,17 @@ footer {
 
 .sns-links {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
+  margin: 10px 20px;
+  margin-bottom: 20px;
 }
 
 .sns-links a {
   color: #000000;
   font-size: 9px;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 20px 5px;
 }
 
 .credit {
