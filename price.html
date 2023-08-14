@@ -44,6 +44,23 @@
       </div>
     </div>
   </header>
+
+
+
+  <div class="stalker"></div>
+
+
+  <script>
+      const stalker = document.querySelector('.stalker');
+
+      document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      stalker.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+      });
+</script>
+
   <div class="price">
     <div class="price-container">
       <h1>注意事項</h1>
@@ -93,6 +110,10 @@
           <div class="payment-service-item">
             <img src="https://play-lh.googleusercontent.com/6ROIMjQLAecP1ZkR42e1-9xo8fgEmWSOMM2j_tu7-xDWkEl538PrtIExmAv1wK9aWx8" alt="Kyash">
             <li>Kyash</li>
+          </div>
+          <div class="payment-service-item">
+            <img src="https://cdn.icon-icons.com/icons2/91/PNG/512/amazon_16438.png" alt="Amazonギフトカード">
+            <li>Amazon</li>
           </div>
           <div class="payment-service-item">
             <img src="img/logo/paypay.png" alt="PayPay">

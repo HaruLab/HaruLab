@@ -10,20 +10,76 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+  <div class="stalker"></div>
+
+  <div class="loading-screen">
+    <div class="logo">
+      <h1>HARULAB</h1>
+    </div>
+  </div>
+
+
+  <script>
+      const stalker = document.querySelector('.stalker');
+
+      document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      stalker.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+      });
+
+    window.addEventListener('load', () => {
+      const loadingScreen = document.querySelector('.loading-screen');
+      const content = document.querySelector('.content');
+      const logo = document.querySelector('.logo');
+
+      setTimeout(() => {
+        loadingScreen.style.opacity = 0;
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+          logo.style.display = 'block';
+          content.classList.add('loaded');
+        }, 3000);
+      }, ); // 2秒後にロゴを表示
+    });
+
+
+
+
+  
+      
+</script>
+
+
+
+  <!-- ヘッダー -->
   <header>
     <div class="container">
+      <!-- メニューバー -->
       <nav class="menu">
         <ul>
-          <li><a href="price.html">Price</a></li>
-          <li><a href="index.html">Works</a></li>
-          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="price.html">Price</a>
+          </li>
+          <li>
+            <a href="index.html">Works</a>
+          </li>
+          <li>
+            <a href="content.html">Content</a>
+          </li>
+          <!-- <li><a href="#">Content</a></li> -->
         </ul>
       </nav>
       <div class="logo">
-        <p><a href="index.html">HARULAB</a></p>
+        <p>
+          <a href="index.html">HARULAB</a>
+        </p>
       </div>
     </div>
   </header>
+
+  
   <div class="whoami">
     <h1>portfolio</h1>
   </div>
