@@ -54,9 +54,9 @@ header {
   justify-content: space-between;
 
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 10px solid rgba(255, 255, 255, 0.027);
 }
 
 
@@ -68,18 +68,24 @@ header {
 }
 
 
+.whoami{
+  font-size: 10px;
+  text-align: center;
+  padding: 200px 100px;
+}
+
+
 
 .reel {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 70px;
   padding-bottom: 40px;
 
 }
 
 .reel iframe {
-  max-width: 90%
+  max-width: 85%
 }
 
 
@@ -108,6 +114,7 @@ span {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+  margin-bottom: 100px;
 }
 
 .card-info{
@@ -117,7 +124,6 @@ span {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションプロパティを追加 */
   width: calc(100% / 3 - 20px);
   margin: 10px;
-  border-radius: 8px; /* 角丸の半径を設定 */
 }
 
 .card:hover {
@@ -176,7 +182,7 @@ span {
   max-width: 87%;
   text-align: center;
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: 100px;
   font-size: 10px;
   line-height: 2;
   margin-bottom: 100px;
@@ -333,7 +339,7 @@ footer {
 @media (prefers-color-scheme: dark) {
 
   body {
-    background-color: #1d1c1c;
+    background-color: #161616;
     color: #ffffff;
   }
 
