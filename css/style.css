@@ -1,9 +1,4 @@
-
-
 body {
-  
-  
-
   margin: 0;
   padding: 0;
   position: relative;
@@ -14,7 +9,7 @@ body {
   color: #666565;
   line-height: 20px;
   align-items: center;
-  
+
 }
 
 
@@ -22,21 +17,22 @@ body {
 
 a {
   text-decoration: none;
-  color: #666565;
+  color: #3e3e3e;
   transition: opacity 0.3s ease;
+
 }
 
 a:hover {
   opacity: 1;
+
 }
 
 
 /* ヘッダーの設定 */
 
 header {
-  
-  
-  font-size: 15px;
+
+  font-size: 20px;
   font-family: "Futura", Helvetica, sans-serif;
   position: fixed;
   top: 0;
@@ -44,8 +40,7 @@ header {
   right: 0;
   z-index: 10;
   height: 40px;
-  
-  
+
 }
 
 
@@ -57,10 +52,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
-  background: rgba( 255, 255, 255, 0 );
-  backdrop-filter: blur( 2px );
-  -webkit-backdrop-filter: blur( 2px );
+
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.027);
 }
 
@@ -83,7 +78,7 @@ header {
 
 }
 
-.reel iframe{
+.reel iframe {
   max-width: 90%
 }
 
@@ -99,84 +94,41 @@ header {
   margin-right: 10px;
 }
 
-span{
+span {
   background-color: rgb(73, 73, 52);
 }
 
-.price {
-  font-family: "Futura", Helvetica, sans-serif;
-  
-  max-width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  font-size: 10px;
-  line-height: 2;
-}
-
-.price h1 {
-  
-  background-color: #91919128;
-  padding: 20px;
-  border-radius:50px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.price p {
-  text-align: left;
-  font-size: 10px;
-  line-height: 3;
-
-}
-
-.price li {
-  text-align: left;
-  margin-left: -30px;
-  font-size: 10px;
-  line-height: 1.5;
-  border-radius: 5px;
-  line-height: 3;
-  /*点を消す*/
-  list-style:none
-  
-}
-
-
 /* カード型レイアウトの設定 */
-
 .card-container {
-  padding-bottom: 00px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
-  /* 中央寄せ */
+  justify-content: flex-start; /* 左寄せ */
   align-items: center;
   text-align: left;
-  /* 中央寄せ */
-  max-width: 90%;
-  /* 最大幅 */
+  max-width: 900px;
   margin: 0 auto;
-  /* 中央寄せ */
+  padding: 0 20px;
 }
 
+.card-info{
+  padding-left: 20px;
+}
 .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションプロパティを追加 */
   width: calc(100% / 3 - 20px);
-  /* 最大3列 */
   margin: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(129, 129, 129, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  font-family: "Futura", Helvetica, sans-serif;
-  transition: transform 0.5s ease;
+  border-radius: 8px; /* 角丸の半径を設定 */
 }
 
 .card:hover {
   transform: scale(1.06);
   box-shadow: 0 0 100px #ffffff0f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションプロパティを追加 */
+}
+
+.card:not(:hover) {
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -188,26 +140,161 @@ span{
 .card h2 {
   line-height: 2;
   text-align: left;
-  font-size: 6px;
-  padding: 0px 10px;
+  font-size: 15px;
+  margin: 10px 0;
 }
 
-
-.card p{
+.card p {
   text-align: left;
-  padding: 0px 10px;
-  font-size: 5px;
+  padding: 2px;
+  margin-top: -10px;
+  font-size: 10px;
 }
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 700px) {
   .card {
-    width: calc(100% / 2 - 20px);
+    width: calc(50% - 20px);
     /* 最大2列 */
-    justify-content: center;
-    max-width: 80%;
-
-
   }
 }
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: calc(100% - 20px);
+    /* 1列 */
+  }
+}
+
+
+/*料金のデザイン*/
+
+.price {
+  
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);/ font-family: "Futura", Helvetica, sans-serif;
+  max-width: 87%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 60px;
+  font-size: 10px;
+  line-height: 2;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .price {
+    grid-template-columns: repeat(1, 1fr);/
+  }
+}
+
+
+
+.price h1 {
+
+  background-color: #91919128;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.price p {
+  text-align: left;
+  font-size: 13px;
+  line-height: 2;
+  padding: 20px;
+  margin-top: 1px;
+  background-color: #2951a225;
+  border-radius: 10px;
+}
+
+.price-container {
+  background-color: #f7f7f7;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.price li {
+  text-align: left;
+  margin-left: -30px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-radius: 5px;
+  line-height: 3;
+  /* 点を消す */
+  list-style: none;
+}
+
+
+/* ペイメントセクション全体 */
+.payment {
+
+  
+  font-family: "Futura", Helvetica, sans-serif;
+  text-align: center;
+  margin: 10px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* セクションタイトル */
+.payment h1 {
+  background-color: #5757571d;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 支払いコンテナ */
+.payment-container {
+  
+  background-color: #f4f4f4cf;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* 支払いコンテナ内のテキスト */
+.payment-container li {
+  padding-left: 30px;
+}
+
+/* 支払いサービスコンテナ */
+.payment-service {
+  
+  background-color: #7979791a;
+  border-radius: 20px;
+  padding: 40px 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: grid;
+  /* グリッドレイアウト */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* 幅が広くなると2列に変化 */
+}
+
+/* 支払いサービスの各アイテム */
+.payment-service-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* サービス画像 */
+.payment-service-item img {
+  max-width: 50%;
+  /* 画像の最大幅を100%に設定 */
+  height: auto;
+  max-height: 70%;
+  /* 画像の最大高さを設定 */
+}
+
+
 
 footer {
   text-align: center;
@@ -219,7 +306,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
 }
 
 .sns-links {
@@ -244,40 +331,32 @@ footer {
 
 
 @media (prefers-color-scheme: dark) {
-  
+
   body {
     background-color: #1d1c1c;
     color: #ffffff;
-    }
-    .card{
-      background-color: #222121;
-    }
-    a{
-      color: #ffffff;
-    }
-    .price h1{
-      color: #ffffff;
-    }
-    .sns-links a {
-      color: #ffffff;
-    }
-}
+  }
 
+  .card {
+    background-color: #222121;
+  }
 
+  a {
+    color: #ffffff;
+  }
 
+  .price h1 {
+    color: #ffffff;
+  }
 
+  .sns-links a {
+    color: #ffffff;
+  }
 
-#js-mouse {
-  pointer-events: none;
-  position: fixed;
-  top: -15px; 
-  left: -15px;
-  width: 30px;
-  height: 30px;
-  background-color:rgba(0,0,102,0.5);
-  border-radius: 50%;
-  transform: translate(0,0);
-  transition: transform 0.3s ease-out;
-  z-index: 9999;
-  opacity: 0;
-}
+  .price-container {
+    background-color: #262626;
+  }
+
+  .payment-container {
+    background-color: #252525;
+  }
