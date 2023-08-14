@@ -40,6 +40,8 @@ header {
   right: 0;
   z-index: 10;
   height: 40px;
+  margin: 20px;
+  
 
 }
 
@@ -47,6 +49,8 @@ header {
 /* コンテナの設定 */
 
 .container {
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
   max-width: 100%;
   margin: 0 auto;
   display: flex;
@@ -69,9 +73,11 @@ header {
 
 
 .whoami{
-  font-size: 10px;
+  font-size: 7px;
   text-align: center;
-  padding: 200px 100px;
+  padding:200px 100px;
+  z-index: auto;
+  margin-bottom: 20px;
 }
 
 
@@ -111,23 +117,27 @@ span {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションプロパティを追加 */
   width: calc(100% / 3 - 20px);
   margin: 10px;
+  border-radius: 10px; /* 角丸の半径を設定 */
+  overflow: hidden; /* 余分な内容がはみ出ないようにオーバーフローを隠す */
 }
 
 .card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transform: scale(1.06);
-  box-shadow: 0 0 100px #ffffff0f;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションプロパティを追加 */
 }
 
 .card:not(:hover) {
   transform: scale(1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
   height: auto;
   display: block;
+  border-top-left-radius: 10px; /* 左上の角丸を設定 */
+  border-top-right-radius: 10px; /* 右上の角丸を設定 */
 }
 
 .card h2 {
