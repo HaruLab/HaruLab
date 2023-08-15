@@ -214,7 +214,6 @@ header {
   z-index: auto;
   letter-spacing: 4px;
   transition: transform 0.4s ease;
-  
 }
 
 .whoami:hover {
@@ -226,17 +225,11 @@ header {
   font-size: 24px;
   padding-top: 150px;
   margin-right: 40px; /* Add margin to create space for the icon */
-  
-  background: linear-gradient(transparent 94%, #4adddd6e 0%);
-  border-radius: 10px;
-  width: 170px;
-  
 }
 
 .whoami p {
   font-size: 10px;
   position: relative;
-
 }
 
 
@@ -265,8 +258,6 @@ header {
     /* Adjust the font size for smaller screens */
   }
 }
-
-
 
 .menu ul {
   list-style: none;
@@ -308,15 +299,12 @@ span {
   margin-bottom: 100px;
 }
 
-
-
-
 .card-info {
   padding-left: 20px;
 }
 
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
   /* アニメーションプロパティを追加 */
   width: calc(100% / 3 - 20px);
   margin: 10px;
