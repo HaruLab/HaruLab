@@ -7,16 +7,34 @@
   <title>HARULAB portfolio</title>
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
-<body>
-  <div class="stalker"></div>
+
+<div class="pagetop">
+  <a href="#top">
+    <span class="pagetop__arrow"></span>
+    scroll top
+  </a>
+</div>
+
+
+
+  <body>
+    <div class="stalker"></div>
+    
 
   <div class="loading-screen">
     <div class="logo">
       <h1>HARULAB</h1>
     </div>
   </div>
+
+
+      
+
+  
 
 
   <script>
@@ -40,10 +58,12 @@
           loadingScreen.style.display = 'none';
           logo.style.display = 'block';
           content.classList.add('loaded');
-        }, 3000);
+        }, 2000);
       }, ); // 2秒後にロゴを表示
     });
 
+
+    
 
 
 
@@ -81,8 +101,11 @@
 
   
   <div class="whoami">
-    <h1>portfolio</h1>
-  </div>
+    <h1>HARULAB</h1>
+    <p>movie 3dcg etc... </p>
+  </div>  
+
+  
 
 
   <div class="card-container">
@@ -189,12 +212,21 @@
 
 <footer>
   <div class="sns-links">
-    
-    <a href="https://twitter.com/Harulablab">Twitter</a>
-    <a href="https://www.instagram.com/harulablab/">Instagram</a>
-    <a href="https://www.youtube.com/channel/UCFhZnyfv-syANHUdxi5imiw">YouTube</a>
+    <a href="https://twitter.com/Harulablab" class="sns-link">
+      <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/twitter-icon-18-256.png" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com/harulablab/" class="sns-link">
+      <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-white-glyph.png" alt="Instagram">
+    </a>
+    <a href="https://www.youtube.com/channel/UCFhZnyfv-syANHUdxi5imiw" class="sns-link">
+      <img src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png" alt="YouTube">
+    </a>
+    <a href="https://misskey.io/@Harulab" class="sns-link">
+      <img src="https://factory.pixiv.net/files/uploads/i/conceptual_drawing/2ad5d148-3efd-4b5c-a3a4-3ae978bb7caf/lightweight_a35618f8bc.png" alt="misskey">
+    </a>
   </div>
-  <div class="credit">HARULAB</div>
+  <div class="credit">© 2023 Your Company</div>
+</footer>
 </footer>
 </body>
 </html>

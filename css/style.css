@@ -9,11 +9,8 @@ body {
   color: #666565;
   line-height: 20px;
   align-items: center;
-
-  
+  transition: transform 0.3s ease; /* サイズ変更のトランジションを追加 */
 }
-
-
 /* リンクの設定 */
 
 a {
@@ -28,6 +25,49 @@ a:hover {
 
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+.pagetop {
+  display: none; /* 初めは非表示 */
+}
+
+@media screen and (max-width: 600px) {
+  .pagetop {
+    height: 30px;
+    width: auto;
+    position: fixed;
+    left: 30px; /* 左側に移動 */
+    bottom: 30px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: solid 1px #fcfcfc0f;
+    border-radius: 20px;
+    padding: 10px 20px; /* 余白追加 */
+    display: flex;
+    justify-content: flex-start; /* 左寄せ */
+    align-items: center;
+    z-index: 2;
+    transition: transform 0.3s ease; /* ホバーアニメーション用のトランジションを追加 */
+  }
+}
+
+.pagetop:hover {
+  transform: scale(1.1); /* ホバーアニメーション */
+}
+
+
+
+.pagetop a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+
+
 /* カーソルの設定 */
 
 .stalker {
@@ -40,7 +80,7 @@ a:hover {
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease;
   z-index: 9999;
-  animation: pulse 2s infinite alternate; /* アニメーションを適用 */
+   /* アニメーションを適用 */
 }
 
 @media (max-width: 500px) { /* スマートフォンの幅以下の場合 */
@@ -114,6 +154,8 @@ header {
 
 }
 
+
+
 /* コンテナの設定 */
 
 .container {
@@ -129,37 +171,88 @@ header {
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(0, 0, 0, 0.048);
+  
 }
 
 
 /* ロゴの設定 */
-
 .logo {
+  
   font-family: "Futura", Helvetica, sans-serif;
   margin-right: 5%;
+  transition: transform 0.4s ease;
 }
 
+.logo:hover {
+  transform: scale(0.9); /* ホバー時の拡大アニメーション */
+}
 
-
-.whoami{
+.whoami {
+  font-weight: 10;
   font-size: 7px;
-  text-align: center;
-  padding: 150px;
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  margin-bottom: 50px;
   z-index: auto;
+  transition: transform 0.4s ease;
+}
 
+.whoami:hover {
+  transform: scale(0.99); /* ホバー時の拡大アニメーション */
 }
 
 
+.whoami h1 {
+  font-size: 24px;
+}
+
+.whoami p {
+  font-size: 10px;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 600px) {
+  .whoami {
+   
+    font-size: 5px; /* Adjust the font size for smaller screens */
+    padding: 50px; /* Adjust the padding for smaller screens */
+    letter-spacing: 5px;
+    
+  }
+  }
+
+  .whoami h1 {
+    padding-top: 150px;
+    pad
+    font-size: 40px; /* Adjust the font size for smaller screens */
+    
+
+  .whoami p {
+    font-size: 8px; /* Adjust the font size for smaller screens */
+  }
+}
 
 .menu ul {
   list-style: none;
   display: flex;
   margin: 20px;
   padding: 0;
+  
 }
+
+
+
+
 
 .menu li {
   margin-right: 10px;
+  transition: transform 0.5s ease;
+}
+
+.menu ul :hover {
+  transform: scale(0.9); /* ホバー時の拡大アニメーション */
 }
 
 span {
@@ -292,8 +385,7 @@ span {
   text-align: left;
   margin-left: -30px;
   font-size: 13px;
-  line-height: 1.5;
-  line-height: 3;
+  line-height: 2;
   /* 点を消す */
   list-style: none;
 }
@@ -371,38 +463,71 @@ span {
 
 
 footer {
-  text-align: center;
+  text-align: left;
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40px;
+  right: 0;
+  width: 180px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .sns-links {
+  
+  
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.048);
   display: flex;
-  justify-content: right;
-  align-items: center;
-  margin: 10px 20px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; /* Center align the content horizontally */
+  border-radius: 50px;
+
+  width: 40%;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.sns-links a {
-  color: #000000;
-  font-size: 9px;
+.sns-link {
+  
+  color: #000;
   text-decoration: none;
-  margin: 20px 5px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 10px;
 }
 
+.sns-link img {
+  height: 20px;
+  transition: transform 0.2s ease; /* サイズ変更のトランジションを追加 */
+}
+
+.sns-link:hover img {
+  transform: scale(1.7); /* ホバー時のサイズ拡大アニメーション */
+}
+
+.sns-links {
+  /* ... その他のスタイル ... */
+  transition: transform 0.5s ease; /* サイズ変更のトランジションを追加 */
+}
+
+.sns-links:hover {
+  transform: scale(1.1); /* ホバー時のサイズ拡大アニメーション */
+}
 .credit {
   color: #ffffff;
   font-size: 5px;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
+
 
 
 
@@ -436,3 +561,9 @@ footer {
   .payment-container {
     background-color: #252525;
   }
+
+  .sms-link{
+   
+  }
+
+}
