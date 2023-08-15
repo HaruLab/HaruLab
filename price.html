@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- CSS HTMLなんもわからないのでコード見ないでください！！　わかりません！！　 -->
 <html lang="jp">
-
 <head>
   <!-- 文字コード -->
   <meta charset="UTF-8">
@@ -14,54 +13,33 @@
   <!-- スタイルシートの読み込み -->
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-
-
 <body>
-
-  <div class="pagetop">
-    <a href="#top">
+  <div class="pagetop"> <a href="#top">
       <span class="pagetop__arrow"></span>
       scroll top
-    </a>
-  </div>
-  
-
-
+    </a> </div>
   <!-- ヘッダー -->
   <header>
     <div class="container">
       <!-- メニューバー -->
       <nav class="menu">
         <ul>
-          <li>
-            <a href="price.html">Price</a>
-          </li>
-          <li>
-            <a href="index.html">Works</a>
-          </li>
-          <li>
-            <a href="content.html">Content</a>
-          </li>
+          <li> <a href="price.html">Price</a> </li>
+          <li> <a href="index.html">Works</a> </li>
+          <li> <a href="content.html">Content</a> </li>
           <!-- <li><a href="#">Content</a></li> -->
         </ul>
       </nav>
       <div class="logo">
-        <p>
-          <a href="index.html">HARULAB</a>
-        </p>
+        <p> <a href="index.html">HARULAB</a> </p>
       </div>
     </div>
   </header>
-
-
-
   <div class="stalker"></div>
-
-
   <script>
-      const stalker = document.querySelector('.stalker');
+    const stalker = document.querySelector('.stalker');
 
       document.addEventListener('mousemove', (e) => {
       const mouseX = e.clientX;
@@ -69,23 +47,18 @@
       
       stalker.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
       });
-</script>
-
+  </script>
   <div class="price">
     <div class="price-container">
-      <h1>注意事項</h1>
-      <br>
+      <h1>注意事項</h1> <br>
       <ul>
-        <li>依頼の練習という形で現在制作依頼を受け付けています。本業ではないため、諸事情により納品が遅れる可能性があります。</li>
-        <br>
-        <li>得意な表現、苦手な表現もございますので、あらかじめご了承ください。</li>
-        <br>
+        <li>依頼の練習という形で現在制作依頼を受け付けています。本業ではないため、諸事情により納品が遅れる可能性があります。</li> <br>
+        <li>得意な表現、苦手な表現もございますので、あらかじめご了承ください。</li> <br>
         <li>指定がなければ24fps or 30fps FHD 1920×1080で制作します。</li>
       </ul>
     </div>
     <div class="price-container">
-      <h1>事前に伝えてほしいこと</h1>
-      <br>
+      <h1>事前に伝えてほしいこと</h1> <br>
       <ul>
         <li>希望納期: 具体的に教えてください。</li>
         <li>希望予算: ご予算についてお知らせください。</li>
@@ -97,8 +70,7 @@
       <p>ご回答いただいた内容をもとに、最終的な予算を提示させていただきます。納期前に進捗状況をお送りします。</p>
     </div>
     <div class="price-container">
-      <h1>料金目安</h1>
-      <br>
+      <h1>料金目安</h1> <br>
       <ul>
         <li>基本(歌詞入れ、絵がメイン、歌ってみた動画など): 5000円〜8000円</li>
         <li>凝った映像(多くの3DCGを使います): 9000円〜30000円</li>
@@ -108,48 +80,37 @@
     </div>
     <div class="payment">
       <div class="payment-container">
-        <h1>お支払い方法</h1>
-        <br>
+        <h1>お支払い方法</h1> <br>
         <p>kyashでのお支払いの場合1000円割になります。</p>
         <p>上記以外のの決済方法を利用したい場合はご相談ください。可能な限り対応します。</p>
         <div class="payment-service">
-          <div class="payment-service-item">
-            <img src="https://cdn.icon-icons.com/icons2/91/PNG/512/amazon_16438.png" alt="Amazonギフトカード">
+          <div class="payment-service-item"> <img src="https://cdn.icon-icons.com/icons2/91/PNG/512/amazon_16438.png" alt="Amazonギフトカード">
             <li>Amazon</li>
           </div>
-          <div class="payment-service-item">
-            <img src="https://play-lh.googleusercontent.com/6ROIMjQLAecP1ZkR42e1-9xo8fgEmWSOMM2j_tu7-xDWkEl538PrtIExmAv1wK9aWx8" alt="Kyash">
+          <div class="payment-service-item"> <img src="https://play-lh.googleusercontent.com/6ROIMjQLAecP1ZkR42e1-9xo8fgEmWSOMM2j_tu7-xDWkEl538PrtIExmAv1wK9aWx8" alt="Kyash">
             <li>Kyash</li>
           </div>
-          <div class="payment-service-item">
-            <img src="https://cdn.icon-icons.com/icons2/91/PNG/512/amazon_16438.png" alt="Amazonギフトカード">
+          <div class="payment-service-item"> <img src="https://cdn.icon-icons.com/icons2/91/PNG/512/amazon_16438.png" alt="Amazonギフトカード">
             <li>Amazon</li>
           </div>
-          <div class="payment-service-item">
-            <img src="img/logo/paypay.png" alt="PayPay">
+          <div class="payment-service-item"> <img src="img/logo/paypay.png" alt="PayPay">
             <li>PayPay</li>
           </div>
         </div>
       </div>
     </div>
     <footer>
-      <div class="sns-links">
-        <a href="https://twitter.com/Harulablab" class="sns-link">
+      <div class="sns-links"> <a href="https://twitter.com/Harulablab" class="sns-link">
           <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/twitter-icon-18-256.png" alt="Twitter">
-        </a>
-        <a href="https://www.instagram.com/harulablab/" class="sns-link">
+        </a> <a href="https://www.instagram.com/harulablab/" class="sns-link">
           <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-white-glyph.png" alt="Instagram">
-        </a>
-        <a href="https://www.youtube.com/channel/UCFhZnyfv-syANHUdxi5imiw" class="sns-link">
+        </a> <a href="https://www.youtube.com/channel/UCFhZnyfv-syANHUdxi5imiw" class="sns-link">
           <img src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png" alt="YouTube">
-        </a>
-        <a href="https://misskey.io/@Harulab" class="sns-link">
+        </a> <a href="https://misskey.io/@Harulab" class="sns-link">
           <img src="https://factory.pixiv.net/files/uploads/i/conceptual_drawing/2ad5d148-3efd-4b5c-a3a4-3ae978bb7caf/lightweight_a35618f8bc.png" alt="misskey">
-        </a>
-      </div> <!-- ここが正しく終了していることを確認 -->
+        </a> </div>
+      <!-- ここが正しく終了していることを確認 -->
     </footer>
-    
   </div>
 </body>
-
 </html>

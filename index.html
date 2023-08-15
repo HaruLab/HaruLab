@@ -1,204 +1,203 @@
 <!DOCTYPE html>
 <html lang="jp">
 <head>
+
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HARULAB portfolio</title>
+  <!-- OGP設定 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='HARULAB Portfolio'>
+  <meta property='og:url' content='https://harulab.work/'>
+  <meta property='og:description' content='映像制作'>
+  <meta property="og:image" content="https://harulab.work/img/ogp.png">
+  <meta property="og:site_name" content="HARULAB Portfolio">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Harulablab">
+  <meta name="twitter:image" content="https://harulab.work/img/ogp.png">
+  <meta name="description" content="ポートフォリオサイトです" />
+  <link rel="shortcut icon" href="https://harulab.work/img/favicon.webp" />
+  <link rel="canonical" href="https://harulab.work/">
+  <meta name="theme-color" content="#43B581" data-react-helmet="true">
+    
+
+
+
+  <title>HARULAB ポートフォリオ</title>
+  <!-- 外部のCSSスタイルシートへのリンク -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- アイコン用のIonicons（ES Modules版） -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <!-- ES Modules非対応ブラウザ向けのフォールバック -->
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- JavaScript機能のためのjQueryライブラリ -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-</head>
 
+
+</head> 
+
+
+
+  <!-- スクロールトップボタン -->
 <div class="pagetop">
   <a href="#top">
-    <span class="pagetop__arrow"></span>
-    scroll top
+    <span class="pagetop__arrow"></span>PageTop
   </a>
 </div>
 
 
 
-  <body>
-    <div class="stalker"></div>
-    
 
-  <div class="loading-screen">
+<!-- マウスストーカー -->
+<div class="stalker"></div>
+
+
+
+
+<!-- ローディング画面 -->
+<div class="loading-screen">
+  <div class="logo">
+    <h1>HARULAB</h1>
+  </div>
+</div>
+
+
+
+
+<!-- ヘッダー -->
+<header>
+  <div class="container">
+    <!-- メニューバー -->
+    <nav class="menu">
+      <ul>
+        <li><a href="price.html">Price</a></li>
+        <li><a href="index.html">Works</a></li>
+        <li><a href="content.html">Contact</a></li>
+      </ul>
+    </nav>
     <div class="logo">
-      <h1>HARULAB</h1>
+      <p><a href="index.html">HARULAB</a></p>
     </div>
+  </div>
+  </header>
+
+
+
+
+  <!-- 自己紹介 -->
+  <div class="whoami">
+    <h1>HARULAB</h1>
+    <p>MV 3DCG Design DTM etc...</p>
+    <p>Bledner Aviutl   </p>
   </div>
 
 
-      
-
-  
-
-
-  <script>
-      const stalker = document.querySelector('.stalker');
-
-      document.addEventListener('mousemove', (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-      
-      stalker.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-      });
-
-    window.addEventListener('load', () => {
-      const loadingScreen = document.querySelector('.loading-screen');
-      const content = document.querySelector('.content');
-      const logo = document.querySelector('.logo');
-
-      setTimeout(() => {
-        loadingScreen.style.opacity = 0;
-        setTimeout(() => {
-          loadingScreen.style.display = 'none';
-          logo.style.display = 'block';
-          content.classList.add('loaded');
-        }, 2000);
-      }, ); // 2秒後にロゴを表示
-    });
-
-
-    
 
 
 
-  
-      
-</script>
-
-
-
-  <!-- ヘッダー -->
-  <header>
-    <div class="container">
-      <!-- メニューバー -->
-      <nav class="menu">
-        <ul>
-          <li>
-            <a href="price.html">Price</a>
-          </li>
-          <li>
-            <a href="index.html">Works</a>
-          </li>
-          <li>
-            <a href="content.html">Content</a>
-          </li>
-          <!-- <li><a href="#">Content</a></li> -->
-        </ul>
-      </nav>
-      <div class="logo">
-        <p>
-          <a href="index.html">HARULAB</a>
-        </p>
-      </div>
-    </div>
-  </header>
-
-  
-  <div class="whoami">
-    <h1>HARULAB</h1>
-    <p>movie 3dcg etc... </p>
-  </div>  
-
-  
-
-
+  <!-- カード型レイアウト -->
   <div class="card-container">
     <div class="card "> <a href="https://www.youtube.com/watch?v=_OzS56neRFs">
       <img src="img/thumbnail/reel.jpg" alt="Example Image ">
     </a>
-    <div class="card-info ">
-        <h2>REEL2023  </h2>
+      <div class="card-info ">
+        <h2>REEL2023 </h2>
         <p>HARULAB </p>
         <p>自主制作</p>
       </div>
     </div>
+
     <div class="card "> <a href="https://www.youtube.com/watch?v=kA73IQRJZIE ">
       <img src="img/thumbnail/love.jpg" alt="Example Image ">
     </a>
-    <div class="card-info ">
-        <h2>だいしきゅーだいしゅき  </h2>
+      <div class="card-info ">
+        <h2>だいしきゅーだいしゅき </h2>
         <p>朝比奈美夜×柚子森律歌 </p>
         <p>CoverMV</p>
       </div>
     </div>
-  <div class="card"> <a href="https://youtu.be/MEgNb7BUAVg">
+
+    <div class="card"> <a href="https://youtu.be/MEgNb7BUAVg">
   <img src="img/thumbnail/Six Feet Under.jpg"
     alt="Example Image">
   </a>
-    <div class="card-info">
-      <h2> シックスフィートアンダー </h2>
-      <p>Aqu3ra</p>
-      <p>第六回連投合作</p>
+      <div class="card-info">
+        <h2> シックスフィートアンダー </h2>
+        <p>Aqu3ra</p>
+        <p>第六回連投合作</p>
+      </div>
     </div>
-  </div>
-  <div class="card"> <a href="https://youtu.be/B_fQXn0FTS4">
+
+    <div class="card"> <a href="https://youtu.be/B_fQXn0FTS4">
   <img src="img/thumbnail/mimi karabakoniai.jpg"
     alt="Example Image">
   </a>
-    <div class="card-info">
-      <h2>カラバコにアイ </h2>
-      <p>MIMI</p>
-      <p>二次創作MV </p>
+      <div class="card-info">
+        <h2>カラバコにアイ </h2>
+        <p>MIMI</p>
+        <p>二次創作MV </p>
+      </div>
     </div>
-  </div>
-  <div class="card"> <a href="https://youtu.be/tERRJRR7wWI">
+
+    <div class="card"> <a href="https://youtu.be/tERRJRR7wWI">
   <img src="img/thumbnail/akeome motion.jpg"
     alt="Example Image">
   </a>
-    <div class="card-info">
-      <h2>あけおめmotion </h2>
-      <p>motion glyptics </p>
-      <p>2023 あけおめ </p>
+      <div class="card-info">
+        <h2>あけおめmotion </h2>
+        <p>motion glyptics </p>
+        <p>2023 あけおめ </p>
+      </div>
     </div>
-  </div>
-  <div class="card"> <a href="https://youtu.be/ePL-1IR2jL8">
+    <div class="card"> <a href="https://youtu.be/ePL-1IR2jL8">
   <img src="img/thumbnail/last.png"
     alt="Example Image">
   </a>
-    <div class="card-info">
-      <h2> ラストラビッシュ </h2>
-      <p>千石ナタデコ子</p>
-      <p>MV制作 </p>
+      <div class="card-info">
+        <h2> ラストラビッシュ </h2>
+        <p>千石ナタデコ子</p>
+        <p>MV制作 </p>
+      </div>
     </div>
-  </div>
-  <div class="card"> <a href="https://youtu.be/WbCrWU4F7JA?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv">
+
+    <div class="card"> <a href="https://youtu.be/WbCrWU4F7JA?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv">
   <img src="img/thumbnail/supika.png"
     alt="Example Image">
   </a>
-    <div class="card-info">
-      <h2> アイウエ歌ってみたMV </h2>
-      <p>奏音スピカ</p>
-      <p>cover MV制作 </p>
+      <div class="card-info">
+        <h2> アイウエ歌ってみたMV </h2>
+        <p>奏音スピカ</p>
+        <p>cover MV制作 </p>
+      </div>
     </div>
-  </div>
-  <div class="card"> <a href="https://youtu.be/B_fQXn0FTS4">
+
+    <div class="card"> <a href="https://youtu.be/B_fQXn0FTS4">
   <img src="img/thumbnail/フローレミ二次創作mv.jpg"
     alt="Example Image">
   </a>
-    <div class="card-info">
-      <h2>フローレミ </h2>
-      <p>MIMI</p>
-      <p>二次創作MV </p>
+      <div class="card-info">
+        <h2>フローレミ </h2>
+        <p>MIMI</p>
+        <p>二次創作MV </p>
+      </div>
     </div>
-  </div>
-  <div class="card"> <a href="https://youtu.be/HJcxALMKCAI">
+    
+    <div class="card"> <a href="https://youtu.be/HJcxALMKCAI">
   <img src="img/thumbnail/IMAWANOKIWA二次創作MV.jpg"
     alt="Example Image">
   </a>
-    <div class="card-info">
-      <h2> IMAWANOKIWA </h2>
-      <p>いよわ</p>
-      <p>二次創作MV </p>
+      <div class="card-info">
+        <h2> IMAWANOKIWA </h2>
+        <p>いよわ</p>
+        <p>二次創作MV </p>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <a href=https://youtu.be/-2QQwnIBo34?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv ">
+
+    <div class="card">
+      <a href=https://youtu.be/-2QQwnIBo34?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv ">
     <img src="img/thumbnail/ghost.png " alt="Example Image ">
   </a>
   <div class="card-info ">
@@ -206,46 +205,79 @@
     <p> 林 奈緒美</p>
     <p>MV制作</p>
   </div>
-</div>
-<div class="card "> <a href="https://youtu.be/eKFSDm35F-o?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv ">
-  <img src="img/thumbnail/YONAGI Stella .png " alt="Example Image ">
-</a>
-<div class="card-info ">
-  <h2>StellarStellar</h2>
-  <p>夜凪七</p>
-  <p>cover MV制作</p>
-</div>
-</div>
+  </div>
 
-<div class="card "> <a href="https://youtu.be/Yj0ER359Zo0?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv ">
-  <img src="img/thumbnail/るるの郵便屋さん.png " alt="Example Image ">
-</a>
-<div class="card-info ">
-    <h2>レディメイド  </h2>
-    <p>るる </p>
+  <div class="card "> <a href="https://youtu.be/eKFSDm35F-o?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv ">
+    <img src="img/thumbnail/YONAGI Stella .png " alt="Example Image ">
+  </a>
+  <div class="card-info ">
+    <h2>StellarStellar</h2>
+    <p>夜凪七</p>
     <p>cover MV制作</p>
   </div>
-</div>
+  </div>
+
+  <div class="card "> <a href="https://youtu.be/Yj0ER359Zo0?list=PL_IDDWCeMOvfUv5lD2VfvLX4TSVfLvrZv ">
+    <img src="img/thumbnail/るるの郵便屋さん.png " alt="Example Image ">
+  </a>
+  <div class="card-info ">
+      <h2>レディメイド  </h2>
+      <p>るる </p>
+      <p>cover MV制作</p>
+    </div>
+  </div>
 
 
 <footer>
-  <div class="sns-links">
-    <a href="https://twitter.com/Harulablab" class="sns-link">
-      <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/twitter-icon-18-256.png" alt="Twitter">
+  <!-- SNS links -->
+  <div class="sns-links ">
+    <!-- Twitter link -->
+    <a href="https://twitter.com/Harulablab " class="sns-link ">
+      <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/twitter-icon-18-256.png " alt="Twitter ">
     </a>
-    <a href="https://www.instagram.com/harulablab/" class="sns-link">
-      <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-white-glyph.png" alt="Instagram">
+    <!-- Instagram link -->
+    <a href="https://www.instagram.com/harulablab/ " class="sns-link ">
+      <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-white-glyph.png " alt="Instagram ">
     </a>
-    <a href="https://www.youtube.com/channel/UCFhZnyfv-syANHUdxi5imiw" class="sns-link">
-      <img src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png" alt="YouTube">
+    <!-- YouTube link -->
+    <a href="https://www.youtube.com/channel/UCFhZnyfv-syANHUdxi5imiw " class="sns-link ">
+      <img src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png " alt="YouTube ">
     </a>
-    <a href="https://misskey.io/@Harulab" class="sns-link">
-      <img src="https://factory.pixiv.net/files/uploads/i/conceptual_drawing/2ad5d148-3efd-4b5c-a3a4-3ae978bb7caf/lightweight_a35618f8bc.png" alt="misskey">
+    <!-- misskey link -->
+    <a href="https://misskey.io/@Harulab " class="sns-link ">
+      <img src="https://factory.pixiv.net/files/uploads/i/conceptual_drawing/2ad5d148-3efd-4b5c-a3a4-3ae978bb7caf/lightweight_a35618f8bc.png " alt="misskey ">
     </a>
   </div>
 </footer>
-</footer>
+
+
+
+<!-- スクリプト -->
+<script>
+  const stalker = document.querySelector('.stalker');
+
+  document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    
+    stalker.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+  });
+
+  window.addEventListener('load', () => {
+    const loadingScreen = document.querySelector('.loading-screen');
+    const content = document.querySelector('.content');
+    const logo = document.querySelector('.logo');
+
+    setTimeout(() => {
+      loadingScreen.style.opacity = 0;
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        logo.style.display = 'block';
+        content.classList.add('loaded');
+      }, 2000);
+    }, ); // 2秒後にロゴを表示
+  });
+</script>
+
 </body>
 </html>
-
-

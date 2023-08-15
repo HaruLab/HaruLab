@@ -165,8 +165,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  height: 40px;
-  margin: 20px;
+  margin: 15px;
 
 
 }
@@ -194,7 +193,6 @@ header {
 
 /* ロゴの設定 */
 .logo {
-
   font-family: "Futura", Helvetica, sans-serif;
   margin-right: 5%;
   transition: transform 0.4s ease;
@@ -206,14 +204,15 @@ header {
 }
 
 .whoami {
+  position: relative;
   font-weight: 10;
   font-size: 7px;
   text-align: left;
   padding-left: 50px;
-  padding-top: 100px;
-  padding-bottom: 80px;
-  margin-bottom: 20px;
+  padding-top: 70px;
+  padding-bottom: 90px;
   z-index: auto;
+  letter-spacing: 4px;
   transition: transform 0.4s ease;
 }
 
@@ -222,14 +221,19 @@ header {
   /* ホバー時の拡大アニメーション */
 }
 
-
 .whoami h1 {
   font-size: 24px;
+  padding-top: 150px;
+  margin-right: 40px; /* Add margin to create space for the icon */
 }
 
 .whoami p {
   font-size: 10px;
+  position: relative;
 }
+
+
+
 
 /* Media Query for Responsive Design */
 @media screen and (max-width: 600px) {
@@ -239,7 +243,7 @@ header {
     /* Adjust the font size for smaller screens */
     padding: 50px;
     /* Adjust the padding for smaller screens */
-    letter-spacing: 5px;
+    letter-spacing: 4px;
 
   }
 }
@@ -289,7 +293,7 @@ span {
   /* 左寄せ */
   align-items: center;
   text-align: left;
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 0 20px;
   margin-bottom: 100px;
@@ -300,7 +304,7 @@ span {
 }
 
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
   /* アニメーションプロパティを追加 */
   width: calc(100% / 3 - 20px);
   margin: 10px;
