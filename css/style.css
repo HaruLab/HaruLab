@@ -227,7 +227,7 @@ header {
   padding-top: 150px;
   margin-right: 40px; /* Add margin to create space for the icon */
   
-  background: linear-gradient(transparent 94%, #4ac0dd6e 0%);
+  background: linear-gradient(transparent 94%, #4adddd6e 0%);
   border-radius: 10px;
   width: 170px;
   
@@ -309,12 +309,6 @@ span {
 }
 
 
-.works-text {
-  font-size: 20px;
-  text-align: right;
-  padding-right: 40px;
-  letter-spacing: 2px;
-}
 
 
 .card-info {
@@ -322,7 +316,7 @@ span {
 }
 
 .card {
-  transition: transform 0.3s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* アニメーションプロパティを追加 */
   width: calc(100% / 3 - 20px);
   margin: 10px;
@@ -368,7 +362,12 @@ span {
   font-size: 10px;
 }
 
-
+@media screen and (max-width: 700px) {
+  .card {
+    width: calc(50% - 20px);
+    /* 最大2列 */
+  }
+}
 
 @media screen and (max-width: 500px) {
   .card {
@@ -397,10 +396,6 @@ span {
 @media screen and (max-width: 700px) {
   .price {
     grid-template-columns: repeat(1, 1fr);/
-  }
-  .card {
-    width: calc(50% - 20px);
-    /* 最大2列 */
   }
 }
 
@@ -617,6 +612,4 @@ footer {
   .sms-link img {
   
   }
-
-
 }
