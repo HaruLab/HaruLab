@@ -47,8 +47,96 @@
       
       stalker.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
       });
+
+
+
+function calculateBudget() {
+    const plan = document.getElementById('plan').value;
+    let basePrice = 0;
+
+    if (plan === 'basic') {
+        basePrice = 4000;
+    } else if (plan === 'normal') {
+        basePrice = 10000;
+    } else if (plan === 'premium') {
+        basePrice = 20000;
+    }
+
+    const deadline = parseInt(document.getElementById('deadline').value);
+    let deadlinePrice = 0;
+
+    if (deadline === 1) {
+        deadlinePrice = 1000;
+    } else if (deadline === 2) {
+        deadlinePrice = 500;
+    }
+
+    const illustration = parseInt(document.getElementById('illustration').value);
+    let illustrationPrice = 0;
+
+    if (!isNaN(illustration)) {
+        illustrationPrice = illustration * 500;
+    }
+
+    const background = document.getElementById('background').value;
+    let backgroundPrice = 0;
+
+    if (background === 'yes') {
+        backgroundPrice = -1000;
+    }
+
+    const totalBudget = basePrice + deadlinePrice + illustrationPrice + backgroundPrice;
+    document.getElementById('result').textContent = `予想金額：${totalBudget}円`;
+}
+
+
   </script>
   <div class="price">
+    <div class="price-container">
+        <h1>簡易料金計算機</h1>
+        <div class="price-cale">
+            <form id="mvForm">
+                <h2><label for="plan">プラン選択</label></h2>
+                <select id="plan" name="plan">
+                    <option value="basic">基本プラン　(シンプル　文字 カメラワーク)</option>
+                    <option value="normal">普通 (+3DCG)</option>
+                    <option value="premium">全力(Full 3DCG)</option>
+                </select>
+
+                <h2><label for="deadline">ご希望納期</label></h2>
+                <select id="deadline" name="deadline">
+                    <option value="1">納期まで1か月以内</option>
+                    <option value="2">納期まで2か月以上</option>
+                    <option value="0">指定なし</option>
+                </select>
+
+                <h2><label for="illustration">イラスト枚数：</label></h2>
+                <select id="illustration" name="illustration">
+                    <option value="1">1 枚</option>
+                    <option value="2">2 枚</option>
+                    <option value="3">3 枚</option>
+                    <option value="4">4 枚</option>
+                    <option value="5">5 枚</option>
+                    <option value="6">6 枚</option>
+                    <option value="7">7 枚</option>
+                    <option value="8">8 枚</option>
+                    <option value="9">9 枚</option>
+                    <option value="10">10 枚</option>
+                </select>
+
+                <h2><label for="background">背景有無：</label></h2>
+                <select id="background" name="background">
+                    <option value="yes">背景あり</option>
+                    <option value="no">背景なし</option>
+                </select>
+
+                <button type="button" onclick="calculateBudget()">予算計算</button>
+            </form>
+  
+          <div id="result"></div>
+      </div>
+    </div>
+
     <div class="price-container">
       <h1>注意事項</h1> <br>
       <ul>
