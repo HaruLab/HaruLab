@@ -77,6 +77,8 @@ html {
 
 
 
+
+
 /* カーソルの設定 */
 
 .stalker {
@@ -367,6 +369,61 @@ span {
 
 /*料金のデザイン*/
 
+
+
+
+.price-cale {
+  text-align: center; /* 中央揃え */
+  padding: 10px
+}
+
+.price-cale h2{
+  text-align: left;
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    background-color: #9a9a9a2b;
+    -webkit-appearance: none; /* Webkit系ブラウザ対応 */
+    -moz-appearance: none; /* Firefox対応 */
+    appearance: none; /* 一般的なブラウザ対応 */
+    background-image: none; /* 背景画像を非表示 */
+}
+
+
+
+button {
+  font-size: 15px;
+  background-color: #4b89ca25;
+  color: #313131;
+  border: none;
+  padding: 20px 39px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 30px;
+  display: block; /* 左寄せ */
+}
+
+
+
+
+#result {
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  text-align: left; /* 左寄せ */
+}
+
+
+
 .price {
 
 
@@ -384,6 +441,11 @@ span {
 @media screen and (max-width: 700px) {
   .price {
     grid-template-columns: repeat(1, 1fr);/
+  }
+}
+@media screen and (min-width: 1400px) {
+  .price {
+    grid-template-columns: repeat(3, 1fr); /* 1200px以上の場合、3列に変更 */
   }
 }
 
@@ -600,4 +662,17 @@ footer {
   .sms-link img {
   
   }
+/*セレクト文字黒*/
+  select,
+input[type="number"] {
+  color: #ffffffc0;
+}
+
+button {
+  
+  color: #fafafa;
+}
+
+
+
 }
