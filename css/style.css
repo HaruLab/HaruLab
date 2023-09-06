@@ -177,7 +177,7 @@ header {
 /* コンテナの設定 */
 
 .container {
-  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.053);
   border-radius: 50px;
   max-width: 100%;
   margin: 0 auto;
@@ -368,10 +368,6 @@ span {
 
 
 /*料金のデザイン*/
-
-
-
-
 .price-cale {
   text-align: center; /* 中央揃え */
   padding: 10px
@@ -388,7 +384,7 @@ input[type="number"] {
     color: #000000;
     border: none;
     border-radius: 50px;
-    background-color: #9a9a9a2b;
+    background-color: #96979921;
     -webkit-appearance: none; /* Webkit系ブラウザ対応 */
     -moz-appearance: none; /* Firefox対応 */
     appearance: none; /* 一般的なブラウザ対応 */
@@ -399,10 +395,10 @@ input[type="number"] {
 
 button {
   font-size: 15px;
-  background-color: #4b89ca25;
+  background-color: #b5e3e666;
   color: #313131;
   border: none;
-  padding: 20px 39px;
+  padding: 15px 39px;
   border-radius: 50px;
   transition: background-color 0.3s ease-in-out;
   margin-top: 30px;
@@ -452,7 +448,7 @@ button {
 
 
 .price h1 {
-  background-color: #a8a6a60f;
+  background-color: #8fd3ea24;
   padding: 10px;
   border-radius: 50px;
   font-size: 20px;
@@ -466,7 +462,7 @@ button {
   line-height: 2;
   padding: 20px;
   margin-top: 1px;
-  background-color: #2951a225;
+  background-color: #7ab4c125;
   border-radius: 10px;
 }
 
@@ -496,16 +492,6 @@ button {
   margin: 10px;
   font-size: 13px;
   line-height: 2;
-}
-
-/* セクションタイトル */
-.payment h1 {
-  background-color: #5757570b;
-  padding: 10px;
-  border-radius: 50px;
-  font-size: 20px;
-  font-weight: bold;
-
 }
 
 /* 支払いコンテナ */
@@ -673,6 +659,18 @@ button {
   color: #fafafa;
 }
 
+
+.price p {
+ 
+  background-color: #3776ad25;
+}
+
+
+
+.price h1 {
+  background-color: #60606020;
+
+}
 
 
 }
