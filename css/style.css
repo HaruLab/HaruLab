@@ -683,33 +683,42 @@ footer {
 }
 
 /* ... 他のCSSルール ... */
-
 @media (prefers-color-scheme: dark) {
+
   body {
     background-color: #161616;
     color: #ffffff;
   }
+
   .card {
     background-color: #222121;
   }
+
   a {
     color: #ffffff;
   }
   .container {
     box-shadow: 2px 3px 15px 0 rgba(255, 255, 255, 0.1);
   }
+
   .price h1 {
     color: #ffffff;
   }
+
   .sns-links a {
     color: #ffffff;
   }
+
   .price-container {
     background-color: #262626;
   }
+
   .payment-container {
     background-color: #252525;
   }
+
+  .sms-link img {
+
   .sns-link img {
     /* ここにCSSスタイルを追加する必要があります */
     height: auto;
@@ -732,4 +741,29 @@ footer {
     width: 30px;
     background-color: rgb(255, 255, 255);
   }
+/*セレクト文字黒*/
+  select,
+input[type="number"] {
+  color: #ffffffc0;
+}
+
+button {
+
+  color: #fafafa;
+}
+
+
+.price p {
+
+  background-color: #3776ad25;
+}
+
+
+
+.price h1 {
+  background-color: #60606020;
+
+}
+
+
 }
