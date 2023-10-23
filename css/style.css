@@ -636,7 +636,7 @@ footer {
   justify-content: center;
 }
 
-/* .sns-links {
+.sns-links {
   box-shadow: -3px 3px 20px 0 rgba(255, 255, 255, 0.114);
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(20px);
@@ -680,7 +680,7 @@ footer {
 .sns-links:hover {
   transform: scale(1.1);
   /* ホバー時のサイズ拡大アニメーション */
-} */
+}
 
 /* ... 他のCSSルール ... */
 
