@@ -2,12 +2,10 @@
 <html lang="jp">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- OGP設定 -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <meta property='og:type' content='website'>
   <meta property='og:title' content='HARULAB Portfolio'>
-  <meta property='og:url' content='https://harulab.work/'>
   <meta property='og:description' content='映像制作'>
   <meta property="og:image" content="https://harulab.work/img/ogp.png">
   <meta property="og:site_name" content="HARULAB Portfolio">
@@ -17,7 +15,38 @@
   <meta name="twitter:image" content="https://harulab.work/img/ogp.png">
   <meta name="description" content="ポートフォリオサイトです" />
   <link rel="shortcut icon" href="https://harulab.work/img/favicon.webp" />
-  <link rel="canonical" href="https://harulab.work/">
+
+
+
+  <!-- SEO編 -->
+  <title>HARULAB　portfolio</title>
+  <meta name="keywords" content="MV制作, 映像, デザイナー,PV">
+  <meta name="description" content="Beginner Motion Designer HARULAB ポートフォリオ Blender/AviUtl/DTM...">
+  <meta name="author" content="HARULAB">
+  <link rel="canonical" href="https://harulab.github.io/HaruLab/">
+
+  <!-- 対策編 -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+
+<!-- OGP編 -->
+<meta property="og:site_name" content="HARULAB portfolio">
+<meta property="og:title" content="HARULAB　portfolio">
+<meta property="og:description" content="ogpの本文。<meta name='description'>と同じにする。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="サイトのURL貼る">
+<meta property="og:image" content="ogpのURL貼る">
+<meta property="fb:app_id" content="App-ID（15文字の半角数字）" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="サイトのURL貼る">
+<meta name="twitter:image" content="ogpのURL貼る">
+
+
+
+
   <title>HARULAB ポートフォリオ</title>
   <!-- 外部のCSSスタイルシートへのリンク -->
   <link rel="stylesheet" href="css/style.css">
@@ -42,13 +71,16 @@
   gtag('config', 'G-9EEB2DLQD8');
 </script>
 
-
-
 </head>
+
+<body>
 <!-- スクロールトップボタン -->
-<div class="pagetop"> <a href="#top">
-    <span class="pagetop__arrow"></span>PageTop
-  </a> </div>
+<div class="pagetop"> 
+  <a href="#top">
+  <span class="pagetop__arrow"></span>TOP</a> 
+</div>
+
+
 <!-- マウスストーカー -->
 <div class="stalker"></div>
 <!-- ローディング画面 -->
@@ -57,9 +89,21 @@
     <h1>HARULAB</h1>
   </div>
 </div>
+
 <!-- ヘッダー -->
 <header>
+  
+  
   <div class="container">
+    <input type="checkbox" id="menu-input" />
+<label for="menu-input" id="menu-button"><span></span></label>
+  <div id="menu">
+    <ul>
+      <li><a href="price.html">Price</a></li>
+      <li><a href="index.html">Works</a></li>
+      <li><a href="content.html">Contact</a></li>
+    </ul>
+  </div>
     <!-- メニューバー -->
     <nav class="menu">
       <ul>
@@ -74,7 +118,9 @@
   </div>
 </header>
 <!-- 自己紹介 -->
+
 <div class="whoami">
+  
   <h1>HARULAB</h1>
   <p>MV 3DCG Design DTM etc...</p>
   <p>Bledner Aviutl </p>
@@ -82,7 +128,7 @@
 <!-- カード型レイアウト -->
 <div class="card-container">
   <div class="card "> <a href="https://www.youtube.com/watch?v=_OzS56neRFs">
-      <img src="img/thumbnail/reel.jpg" alt="Example Image ">
+      <img src="img/thumbnail/reel.jpg"　data-video-id="QdmVFlmbIy8" class="js-modal-video" alt="Example Image ">
     </a>
     <div class="card-info ">
       <h2>REEL2023 </h2>
