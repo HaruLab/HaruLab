@@ -1,37 +1,28 @@
 <!DOCTYPE html>
-<!-- CSS HTMLなんもわからないのでコード見ないでください！！　わかりません！！　 -->
-<html lang="jp">
+<html lang="ja">
 <head>
-  <!-- 文字コード -->
+  <!-- 文字コードをUTF-8に設定 -->
   <meta charset="UTF-8">
   <!-- IEの互換性設定 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- ビューポートの設定 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- タイトル -->
+  <!-- タイトル設定 -->
   <title>HARULAB portfolio</title>
   <!-- スタイルシートの読み込み -->
   <link rel="stylesheet" href="css/style.css">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </script>
 
+  <!-- Google Analyticsの設定 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EEB2DLQD8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9EEB2DLQD8');
+  </script>
+  </head>
 
-
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9EEB2DLQD8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9EEB2DLQD8');
-</script>
-
-
-
-</head>
 <body>
   <div class="pagetop"> <a href="#top">
       <span class="pagetop__arrow"></span>
@@ -231,7 +222,7 @@ function calculateBudget() {
         </div>
       </div>
     </div>
-    <footer>
+    <sns-overlay>
       <div class="sns-links"> <a href="https://twitter.com/Harulablab" class="sns-link">
           <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/twitter-icon-18-256.png" alt="Twitter">
         </a> <a href="https://www.instagram.com/harulablab/" class="sns-link">
@@ -241,7 +232,10 @@ function calculateBudget() {
         </a> <a href="https://misskey.io/@Harulab" class="sns-link">
           <img src="https://factory.pixiv.net/files/uploads/i/conceptual_drawing/2ad5d148-3efd-4b5c-a3a4-3ae978bb7caf/lightweight_a35618f8bc.png" alt="misskey">
         </a> </div>
-    </footer>
+    </sns-overlay>
+  </div>
+  <div class="footer">
+    <small>&copy; 2023 HARULAB</small>
   </div>
 </body>
 </html>

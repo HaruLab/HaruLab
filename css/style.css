@@ -8,16 +8,12 @@ body {
   color: #666565;
   font-family: "Arial", sans-serif;
   line-height: 10px;
-  align-items: center;
   transition: transform 0.3s ease;
   scroll-behavior: smooth;
 }
 
-
 /* リンクの設定 */
-
 a {
-  /*リンク下線*/
   text-decoration: none;
   color: #3e3e3e;
 }
@@ -26,21 +22,15 @@ a:hover {
   opacity: 1;
 }
 
-
 /* ページの先頭へ */
-
 .pagetop {
-  /* 初めは非表示 none */
   display: none;
   font-weight: 600;
 }
 
-
 /* スマートフォン用のページ先頭へ */
-
 @media screen and (max-width: 600px) {
   .pagetop {
-    /* ボタンのスタイル */
     position: fixed;
     bottom: 30px;
     left: 30px;
@@ -53,25 +43,19 @@ a:hover {
     background: rgba(69, 42, 42, 0);
     border: solid 1px #fcfcfc0f;
     border-radius: 50px;
-    /* ホバーアニメーション */
     transition: transform 0.3s ease;
     z-index: 2;
-    /* 背景のぼかし効果 */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
 }
 
-
 /* ページトップのホバーアニメーション */
-
 .pagetop:hover {
   transform: scale(1.1);
 }
 
-
 /* マウスストーカーカーソルの設定 */
-
 .stalker {
   mix-blend-mode: difference;
   position: fixed;
@@ -83,12 +67,24 @@ a:hover {
   transform: translate(-50%, -50%);
   transition: transform 0.1s ease;
   z-index: 10000;
+  /* パーティクルのスタイルを設定 */
+}
+.particle {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 9999;
 }
 
+
+
+
 @media (max-width: 600px) {
-  /* スマートフォンの幅以下の場合 */
   .stalker {
-    /* マウスストーカーを非表示にする */
     display: none;
   }
 }
@@ -100,14 +96,13 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.646);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 1s ease;
-  /* フェードアウトのトランジションを適用 */
   z-index: 9999;
 }
 
@@ -126,9 +121,7 @@ a:hover {
   opacity: 1;
 }
 
-
 /* ヘッダーの設定 */
-
 header {
   font-size: 15px;
   font-family: "Futura", Helvetica, sans-serif;
@@ -139,29 +132,16 @@ header {
   z-index: 9999;
 }
 
-
 /* HARULAB文字のスタイル */
-
 .container {
   padding-top: 20px;
   padding-bottom: 20px;
-  box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.053);
+  box-shadow: 0 1px 100px 0 rgba(122, 122, 122, 0.092);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* 背景設定を削除するか、適切な背景を設定する */
   border: 0.1px solid rgba(0, 0, 0, 0.048);
-}
-
-@-webkit-keyframes bugfix {
-  from {
-    padding: 0;
-  }
-  to {
-    padding: 0;
-  }
 }
 
 #menu-button {
@@ -189,8 +169,8 @@ header {
 
 #menu-button span:before, #menu-button span:after {
   height: 3px;
-  width: 40px;
-  background-color: rgb(72, 72, 72);
+  width: 30px;
+  background-color: rgba(44, 44, 44, 0.622);
   position: absolute;
   content: "";
   transition: all .2s ease-in-out;
@@ -204,7 +184,8 @@ input[type=checkbox]:checked~#menu {
   visibility: visible;
 }
 
-input[type=checkbox]:checked~#menu-button:hover span, input[type=checkbox]:checked~#menu-button span {
+/* チェックされたメニューボタンのスタイルを調整 */
+input[type=checkbox]:checked~#menu-button span {
   background: transparent;
 }
 
@@ -213,37 +194,27 @@ input[type=checkbox]:checked~#menu-button span:before {
 }
 
 input[type=checkbox]:checked~#menu-button span:after {
-  transform: rotate(135deg) translate(1px, 4px);
+  transform: rotate(135deg) translate(1px, 5px);
 }
 
 #menu {
   height: 100vh;
-  /* ビューポートの高さいっぱいに設定 */
   width: 100vw;
-  /* ビューポートの幅いっぱいに設定 */
-  background: #8c8c8ce9;
+  background: #dfdfdfba;
   z-index: 2;
   position: fixed;
   top: 0;
-  /* 上端に配置 */
   left: 0;
-  /* 左端に配置 */
   display: flex;
   justify-content: center;
-  /* 水平方向の中央配置 */
   align-items: center;
-  /* 垂直方向の中央配置 */
   visibility: hidden;
 }
 
-#menu.active {}
-
 #menu ul {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   height: 10vh;
   padding-left: 0;
   list-style-type: none;
@@ -251,17 +222,20 @@ input[type=checkbox]:checked~#menu-button span:after {
 
 #menu ul li {
   padding: 1em;
+  margin-top: 30px;
 }
 
 #menu ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 3em;
 }
 
-#menu ul li a:hover {
-  color: #000!important;
+#menu ul li :hover {
+  color: #ffffff6f !important;
 }
+
+
 
 
 /* ロゴのスタイル */
@@ -397,7 +371,7 @@ span {
   width: calc(33.33% - 20px);
   /* カードの幅を計算 */
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.2s ease;
   /* アニメーションプロパティ */
@@ -409,7 +383,7 @@ span {
 .card:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   /* ホバー時の影 */
-  transform: scale(1.06);
+  transform: scale(0.95);
   /* ホバー時の拡大 */
 }
 
@@ -417,8 +391,8 @@ span {
   width: 100%;
   height: auto;
   display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .card h2 {
@@ -479,7 +453,7 @@ select, input[type="number"] {
 
 button {
   font-size: 15px;
-  background-color: #b5e3e666;
+  background-color: rgba(124, 124, 124, 0.095);
   color: #313131;
   border: none;
   padding: 15px 39px;
@@ -504,8 +478,8 @@ button {
 .price {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 95%;
-  text-align: center;
+  max-width: 99%;
+  text-align: left;
   margin: 0 auto;
   padding-top: 100px;
   font-size: 10px;
@@ -528,8 +502,7 @@ button {
 }
 
 .price h1 {
-  background-color: #8fd3ea24;
-  padding: 10px;
+  padding: 13px;
   border-radius: 50px;
   font-size: 20px;
   font-weight: bold;
@@ -541,15 +514,14 @@ button {
   line-height: 2;
   padding: 20px;
   margin-top: 1px;
-  background-color: #7ab4c125;
+  background-color: #c3c3c325;
   border-radius: 10px;
 }
 
 .price-container {
-  background-color: #f7f7f7;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .price li {
@@ -566,7 +538,6 @@ button {
 
 .payment {
   font-family: "Futura", Helvetica, sans-serif;
-  text-align: center;
   margin: 10px;
   font-size: 13px;
   line-height: 2;
@@ -576,7 +547,6 @@ button {
 /* 支払いコンテナ */
 
 .payment-container {
-  background-color: #f4f4f4cf;
   padding: 10px 20px;
   border-radius: 10px;
   padding-bottom: 20px;
@@ -593,7 +563,6 @@ button {
 /* 支払いサービスコンテナ */
 
 .payment-service {
-  background-color: #7979791a;
   border-radius: 20px;
   padding: 20px 10px;
   display: grid;
@@ -616,15 +585,15 @@ button {
 /* サービス画像 */
 
 .payment-service-item img {
-  max-width: 70%;
+  max-width: 60%;
   /* 画像の最大幅を100%に設定 */
   height: auto;
-  max-height: 70%;
+  max-height: 60%;
   /* 画像の最大高さを設定 */
   margin-bottom: 5px;
 }
 
-footer {
+sns-overlay {
   text-align: left;
   position: fixed;
   bottom: 0;
@@ -637,6 +606,7 @@ footer {
 }
 
 .sns-links {
+  transform: translateY(1px);
   box-shadow: -3px 3px 20px 0 rgba(255, 255, 255, 0.114);
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(20px);
@@ -658,7 +628,9 @@ footer {
 }
 
 .sns-link {
-  color: #000;
+  
+  filter: invert(1); /* アイコンの色を反転 */
+  color: #000; /* 通常の色 */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -667,6 +639,7 @@ footer {
 }
 
 .sns-link img {
+  
   height: 20px;
   transition: transform 0.4s ease;
   /* サイズ変更のトランジションを追加 */
@@ -674,96 +647,75 @@ footer {
 
 .sns-link:hover img {
   transform: scale(1.4);
-  /* ホバー時のサイズ拡大アニメーション */
+  transform: translateY(3px);
+  /* ホバー時のサイズ拡大アニメーションと色反転 */
 }
 
-.sns-links:hover {
-  transform: scale(1.1);
-  /* ホバー時のサイズ拡大アニメーション */
+
+
+/* スタイルシートに記述 */
+.footer {
+  
+  color: #111111; /* フッターのテキスト色を設定 */
+  padding: 30px; /* パディングを追加してフッターの内部のスペースを調整 */
+  text-align: center; /* テキストを中央揃えにする */
 }
 
-/* ... 他のCSSルール ... */
+
+/* ダークモード */
 @media (prefers-color-scheme: dark) {
 
   body {
-    background-color: #161616;
-    color: #ffffff;
+    background-color: #222222;
+    color: #ffffffe2;
   }
 
   .card {
-    background-color: #222121;
+    background-color: #252525;
   }
 
   a {
     color: #ffffff;
   }
-  .container {
-    box-shadow: 2px 3px 15px 0 rgba(255, 255, 255, 0.1);
-  }
+
 
   .price h1 {
     color: #ffffff;
   }
-
-  .sns-links a {
+  .payment-container {
     color: #ffffff;
   }
 
-  .price-container {
-    background-color: #262626;
+  /* セレクト文字のカラーを調整 */
+  select,
+  input[type="number"] {
+    color: #ffffff;
   }
 
-  .payment-container {
-    background-color: #252525;
-  }
-
-  .sms-link img {
-
-  .sns-link img {
-    /* ここにCSSスタイルを追加する必要があります */
-    height: auto;
-  }
-  /*セレクト文字黒*/
-  select, input[type="number"] {
-    color: #ffffffc0;
-  }
   button {
     color: #fafafa;
   }
+
   .price p {
-    background-color: #3776ad25;
+    background-color: #3c3c3c2f;
   }
-  .price h1 {
-    background-color: #60606020;
+
+  .sns-link {
+    filter: invert(0); /* アイコンの色を反転 */
   }
-  #menu-button span:before, #menu-button span:after {
+
+  .footer{
+    color: #ffffff;
+  }
+
+  #menu {
+    background-color: #111111a0;
+  }
+
+  #menu-button span:before,
+  #menu-button span:after {
     height: 3px;
     width: 30px;
-    background-color: rgb(255, 255, 255);
+    background-color: #e6e6e6e8;
   }
-/*セレクト文字黒*/
-  select,
-input[type="number"] {
-  color: #ffffffc0;
-}
-
-button {
-
-  color: #fafafa;
-}
-
-
-.price p {
-
-  background-color: #3776ad25;
-}
-
-
-
-.price h1 {
-  background-color: #60606020;
-
-}
-
-
 }
