@@ -54,29 +54,6 @@ a:hover {
 .pagetop:hover {
   transform: scale(1.1);
 }
-
-/* マウスストーカーカーソルの設定 */
-.stalker {
-  mix-blend-mode: difference;
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: #efefefc5;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease;
-  z-index: 10000;
-}
-
-
-
-@media (max-width: 600px) {
-  .stalker {
-    display: none;
-  }
-}
-
 .loading-screen {
   font-size: 10px;
   position: fixed;
@@ -646,6 +623,46 @@ sns-overlay {
   color: #111111; /* フッターのテキスト色を設定 */
   padding: 30px; /* パディングを追加してフッターの内部のスペースを調整 */
   text-align: center; /* テキストを中央揃えにする */
+}
+
+
+/* contactページ */
+.about {
+  font-family: "Futura", Helvetica, sans-serif;
+  max-width: 99%;
+  margin: 0 auto;
+  padding: 50px; /* 左右の余白 */
+  margin: 100px 0 300px; /* 上部余白と下部余白 */
+  text-align: left; /* 左寄せ */
+  line-height: 2;
+}
+
+.about h1,
+.name,
+.about h2 {
+  font-weight: 100;
+}
+
+.about h1 {
+  margin-bottom: 20px;
+}
+
+.name {
+  padding-bottom: 20px;
+}
+
+.about h2 {
+  font-size: 20px;
+  margin: 15px 0; /* h2の上下の余白 */
+}
+
+.about p {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.contact {
+  margin-top: 30px; /* 連絡情報の上部余白 */
 }
 
 
