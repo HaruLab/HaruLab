@@ -415,7 +415,7 @@ select, input[type="number"] {
   /* 背景画像を非表示 */
 }
 
-button {
+  .custom-button  {
   font-size: 15px;
   background-color: rgba(124, 124, 124, 0.095);
   color: #313131;
