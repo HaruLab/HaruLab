@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <div id="head"></div>
+</head>
+<body>
+    <div class="loader-wrapper"> <div class="loader"></div></div>
+    <header>
+        <!-- メニュー切り替えボタン -->
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="menu.svg" alt="Menu">
+        </button>
+        
+        <!-- ロゴ -->
+        <a href="index.html" class="top-right-image">
+            <img src="black_logo.svg" alt="logo">
+        </a>
+        
+        <!-- サイドバー -->
+        <nav class="sidebar-menu" id="sidebar-menu">
+            <!-- メニューを閉じるボタン -->
+            <button class="close-menu" id="close-menu">
+                <img src="close.svg" alt="Close Menu">
+            </button>
+            
+            <!-- 矢印 -->
+            <div id="arrow-container">
+                <img src="right_arrow.svg" alt="Right Arrow" class="arrow-right">
+            </div>
+
+            <!-- メニュー内のURL、コンテンツ -->
+            <div id="header"></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-header">サイトマップ</h1>
+
+        <section class="sitemap">
+            <h2>サイトマップ</h2>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li>
+                    <a href="#">サービス</a>
+                    <ul>
+                        <li><a href="#">サービス1</a></li>
+                        <li><a href="#">サービス2</a></li>
+                        <li><a href="#">サービス3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">会社情報</a>
+                    <ul>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">沿革</a></li>
+                        <li><a href="#">アクセス</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ブログ</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- スクリプト読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+main {
+
+    max-width: 90%; /* 最大幅を90%に設定 */
+}
+.sitemap {
+    padding: 20px; /* 内側の余白 */
+    margin: 20px 0; /* 上下に余白を追加 */
+    max-width: 100%; /* 親要素の幅に合わせる */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影 */
+    border-radius: 5px; /* 角を丸める */
+}
+
+.sitemap h2 {
+    font-size: 1.8em; /* 見出しのフォントサイズ */
+    margin-bottom: 20px; /* 下の余白 */
+}
+
+.sitemap ul {
+    list-style: none; /* リストの点を非表示 */
+    padding: 0; /* 内側の余白を削除 */
+    margin: 0; /* 外側の余白を削除 */
+}
+
+.sitemap li {
+    margin-bottom: 10px; /* 下の余白 */
+}
+
+.sitemap a {
+    text-decoration: none; /* 下線を削除 */
+    color: #7affe9; /* リンクの色 */
+}
+
+.sitemap a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+.sitemap ul ul {
+    padding-left: 20px; /* 入れ子のリストの左側の余白 */
+}
+</style>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="style.css">
+    <div id="head"></div>
+</head>
+<body>
+    <div class="loader-wrapper"> <div class="loader"></div></div>
+    <header>
+        <!-- メニュー切り替えボタン -->
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="menu.svg" alt="Menu">
+        </button>
+        
+        <!-- ロゴ -->
+        <a href="index.html" class="top-right-image">
+            <img src="black_logo.svg" alt="logo">
+        </a>
+        
+        <!-- サイドバー -->
+        <nav class="sidebar-menu" id="sidebar-menu">
+            <!-- メニューを閉じるボタン -->
+            <button class="close-menu" id="close-menu">
+                <img src="close.svg" alt="Close Menu">
+            </button>
+            
+            <!-- 矢印 -->
+            <div id="arrow-container">
+                <img src="right_arrow.svg" alt="Right Arrow" class="arrow-right">
+            </div>
+
+            <!-- メニュー内のURL、コンテンツ -->
+            <div id="header"></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-header">About</h1>
+
+        <div class="profile-container">
+            <div class="profile-picture">
+                <img src="your-photo.jpg" alt="Your Photo">
+            </div>
+            <div class="profile-details">
+                <h1>HARULAB</h1>
+                <p>自己紹介</p>
+                <ul>
+                    <li>趣味</li>
+                    <li>趣味</li>
+                    <li>趣味</li>
+                </ul>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- スクリプト読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+
+
+.profile-container {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 左寄せ */
+    padding: 30px;
+
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    text-align: left; /* 左寄せ */
+    width: 100%;
+}
+
+.profile-details h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.profile-details p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.profile-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-details li {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+
+</style>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ハンバーガーメニュー</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- メニュー切り替えボタン -->
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="menu.svg" alt="Menu">
+        </button>
+        
+        <!-- ロゴ -->
+        <a href="index.html" class="top-right-image">
+            <img src="black_logo.svg" alt="logo">
+        </a>
+        
+        <!-- サイドバー -->
+        <nav class="sidebar-menu" id="sidebar-menu">
+            <!-- メニューを閉じるボタン -->
+            <button class="close-menu" id="close-menu">
+                <img src="close.svg" alt="Close Menu">
+            </button>
+            
+            <!-- 矢印 -->
+            <div id="arrow-container">
+                <img src="right_arrow.svg" alt="Right Arrow" class="arrow-right">
+            </div>
+
+            <!-- メニュー内のURL、コンテンツ -->
+            <div id="header"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="price">
+            <div class="price-container">
+                <h1>料金計算機</h1>
+                <div class="price-cale">
+                    <form id="mvForm">
+                        <h2><label for="plan">プラン選択</label></h2>
+                        <select id="plan" name="plan">
+                            <option value="basic">基本　(シンプル　文字 カメラワーク)</option>
+                            <option value="normal">普通 (+3DCG)</option>
+                            <option value="premium">全力(Full 3DCG等)</option>
+                        </select>
+        
+                        <h2><label for="deadline">ご希望納期</label></h2>
+                        <select id="deadline" name="deadline">
+                            <option value="1">納期まで1か月以内</option>
+                            <option value="2">納期まで2か月以上</option>
+                            <option value="0">指定なし</option>
+                        </select>
+        
+                        <h2><label for="illustration">イラスト枚数</label></h2>
+                        <select id="illustration" name="illustration">
+                            <option value="1">1 枚</option>
+                            <option value="2">2 枚</option>
+                            <option value="3">3 枚</option>
+                            <option value="4">4 枚</option>
+                            <option value="5">5 枚</option>
+                            <option value="6">6 枚</option>
+                            <option value="7">7 枚</option>
+                            <option value="8">8 枚</option>
+                            <option value="9">9 枚</option>
+                            <option value="10">10 枚以上</option>
+                        </select>
+        
+                        <h2><label for="background">背景有無</label></h2>
+                        <select id="background" name="background">
+                            <option value="yes">背景あり</option>
+                            <option value="no">背景なし</option>
+                        </select>
+                        <button type="button" class="custom-button" onclick="calculateBudget()">計算</button>
+        
+                    </form>
+        
+                <div id="result"></div>
+            </div>
+            </div>
+        
+            <div class="price-container">
+            <h1>注意事項</h1> <br>
+            <ul>
+                <li>映像練習の一環として制作依頼を受け付けておりますが、本業ではないため、諸事情により納品が遅れる可能性がございます。</li> <br>
+                <li>指定がなければ、FHD 1920×1080の解像度で、24fpsまたは30fpsで納品します。</li><br>
+                <li>制作期間は最低１ヶ月必要です。</li><br>
+                <li>企業案件は受付していますが、お支払い方法をもう一度後確認ください。</li><br>
+                <li>不明な点がありましたらDMお願いします。</li><br>
+                <li></li><br>
+                
+            </ul>
+            </div>
+            <div class="price-container">
+            <h1>事前に伝えてほしいこと</h1> <br>
+            <ul>
+                <li>希望納期</li>
+            </ul>
+            <ul>
+                <li>希望予算</li>
+            </ul>
+            <ul>
+                <li>活動名</li>
+            </ul>
+            <ul>
+                <li>イラスト</li>
+            </ul>
+                <p>イラスト有無、枚数、背景有無<br>可能であればパーツ分けしたもの(髪、背景)</p>
+            <ul>
+                <li>要望</li>
+            </ul>
+                <p>参考資料があればお送りください。 具体的に伝えてもらえると作りやすいです。</p>
+            <ul>
+                <li>歌詞 クレジット情報</li>
+            </ul>
+                <p>ご提供いただいた情報をもとに、金額を提示します。納期前には進捗状況をお知らせします。</p>
+            </div>
+            <div class="payment">
+            <div class="payment-container">
+                <h1>お支払い方法</h1> <br>
+                <p>kyashでのお支払いの場合1000円引きになります。</p>
+                <div class="payment-service">
+                <div class="payment-service-item"> <img src="https://cdn.icon-icons.com/icons2/91/PNG/512/amazon_16438.png" alt="Amazonギフトカード">
+                    <li>Amazon</li>
+                </div>
+                <div class="payment-service-item"> <img src="https://play-lh.googleusercontent.com/6ROIMjQLAecP1ZkR42e1-9xo8fgEmWSOMM2j_tu7-xDWkEl538PrtIExmAv1wK9aWx8" alt="Kyash">
+                    <li>Kyash</li>
+                
+                </div>
+            </div>
+            </div>
+    </main>
+
+    <!-- スクリプト読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+    .price-cale {
+text-align: center;
+/* 中央揃え */
+padding: 10px
+}
+
+.price-cale h2 {
+text-align: left;
+}
+
+select, input[type="number"] {
+width: 100%;
+padding: 15px;
+color: #000000;
+border: none;
+border-radius: 50px;
+background-color: #96979921;
+-webkit-appearance: none;
+/* Webkit系ブラウザ対応 */
+-moz-appearance: none;
+/* Firefox対応 */
+appearance: none;
+/* 一般的なブラウザ対応 */
+background-image: none;
+/* 背景画像を非表示 */
+}
+
+.custom-button  {
+background-color: rgba(124, 124, 124, 0.095);
+color: #313131;
+border: none;
+padding: 15px 39px;
+border-radius: 50px;
+transition: background-color 0.3s ease-in-out;
+margin-top: 30px;
+display: block;
+/* 左寄せ */
+}
+
+#result {
+font-weight: bold;
+border-radius: 50px;
+padding-top: 20px;
+padding-bottom: 30px;
+padding-left: 10px;
+text-align: left;
+/* 左寄せ */
+}
+
+.price {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+max-width: 99%;
+text-align: left;
+margin: 0 auto;
+padding-top: 100px;
+font-size: 15px;
+line-height: 1.5;
+margin-bottom: 100px;
+}
+
+@media screen and (max-width: 700px) {
+.price {
+    grid-template-columns: repeat(1, 1fr);
+    /
+}
+}
+
+@media screen and (min-width: 1400px) {
+.price {
+    grid-template-columns: repeat(3, 1fr);
+    /* 1200px以上の場合、3列に変更 */
+}
+}
+
+.price h1 {
+padding: 13px;
+border-radius: 50px;
+font-size: 30px;
+font-weight: bold;
+}
+
+.price p {
+text-align: left;
+line-height: 2;
+padding: 20px;
+margin-top: 1px;
+background-color: #c3c3c338;
+border-radius: 10px;
+}
+
+.price-container {
+padding: 10px 30px;
+border-radius: 10px;
+margin: 5px;
+}
+
+.price li {
+text-align: left;
+margin-left: -30px;
+font-size: 15px;
+line-height: 2;
+/* 点を消す */
+list-style: none;
+}
+
+
+/* ペイメントセクション全体 */
+
+.payment {
+margin: 10px;
+font-size: 15px;
+line-height: 2;
+}
+
+
+/* 支払いコンテナ */
+
+.payment-container {
+padding: 10px 20px;
+border-radius: 10px;
+padding-bottom: 20px;
+}
+
+
+/* 支払いコンテナ内のテキスト */
+
+.payment-container li {
+padding-left: 30px;
+}
+
+
+/* 支払いサービスコンテナ */
+
+.payment-service {
+border-radius: 20px;
+padding: 20px 10px;
+display: grid;
+/* グリッドレイアウト */
+grid-template-columns: repeat(auto-fit, minmax(3px, 0.3fr));
+/* 幅が広くなると2列に変化 */
+}
+
+
+/* 支払いサービスの各アイテム */
+
+.payment-service-item {
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+/* サービス画像 */
+
+.payment-service-item img {
+max-width: 60%;
+/* 画像の最大幅を100%に設定 */
+height: auto;
+max-height: 60%;
+/* 画像の最大高さを設定 */
+margin-bottom: 5px;
+}
+
+</style>

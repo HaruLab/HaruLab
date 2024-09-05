@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <div id="head"></div>
+</head>
+<body>
+    <div class="loader-wrapper"> <div class="loader"></div></div>
+    <header>
+        <!-- メニュー切り替えボタン -->
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="menu.svg" alt="Menu">
+        </button>
+        
+        <!-- ロゴ -->
+        <a href="index.html" class="top-right-image">
+            <img src="black_logo.svg" alt="logo">
+        </a>
+        
+        <!-- サイドバー -->
+        <nav class="sidebar-menu" id="sidebar-menu">
+            <!-- メニューを閉じるボタン -->
+            <button class="close-menu" id="close-menu">
+                <img src="close.svg" alt="Close Menu">
+            </button>
+            
+            <!-- 矢印 -->
+            <div id="arrow-container">
+                <img src="right_arrow.svg" alt="Right Arrow" class="arrow-right">
+            </div>
+
+            <!-- メニュー内のURL、コンテンツ -->
+            <div id="header"></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-header">使用デバイス</h1>
+        <div class="section-header"></div>
+        <section class="device-grid">
+            <div class="device-item">
+                <div class="slider">
+                    <img src="https://via.placeholder.com/300x200" alt="PC構成">
+                    <img src="https://via.placeholder.com/300x200" alt="PC構成">
+                    <!-- 追加の画像 -->
+                </div>
+                <div class="device-info">
+                    <h2>PC構成</h2>
+                    <p>プロセッサ: Intel Core i5</p>
+                    <p>グラフィック: GeForce RTX 4060</p>
+                    <p>RAM: 16GB</p>
+                </div>
+            </div>
+            <div class="device-item">
+                <div class="slider">
+                    <img src="https://via.placeholder.com/300x200" alt="ガジェット">
+                    <img src="https://via.placeholder.com/300x200" alt="ガジェット">
+                    <!-- 追加の画像 -->
+                </div>
+                <div class="device-info">
+                    <h2>ガジェット</h2>
+                    <p>詳細情報や仕様などをここに追加します。</p>
+                </div>
+            </div>
+            <div class="device-item">
+                <div class="slider">
+                    <img src="https://via.placeholder.com/300x200" alt="カメラ">
+                    <img src="https://via.placeholder.com/300x200" alt="カメラ">
+                    <!-- 追加の画像 -->
+                </div>
+                <div class="device-info">
+                    <h2>カメラ</h2>
+                    <p>モデル: Sony A6400</p>
+                    <p>購入日: 2023年5月</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- スクリプト読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+
+/* 基本スタイル */
+.section-header {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.device-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.device-item {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%; /* デフォルトは全幅 */
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px; /* 画像間の間隔 */
+    padding: 10px 10px; /* スライダー上下の余白 */
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    max-width: 100%;
+    border-radius: 5px; /* 画像の角を丸くする */
+}
+
+.device-info {
+    padding: 10px;
+    text-align: left; /* 文字を左寄せ */
+}
+
+.device-info h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.device-info p {
+    margin: 5px 0;
+}
+
+/* メディアクエリ - デスクトップ表示時 */
+@media (min-width: 900px) {
+    .device-item {
+        width: 60%; /* デスクトップ表示時に幅を60%に制限 */
+        margin: 0 auto; /* 中央に配置 */
+    }
+
+    .device-grid {
+        grid-template-columns: 1fr; /* 1列での表示を維持 */
+    }
+
+}
+    
+</style>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <div id="head"></div>
+<body>
+    <div class="loader-wrapper"> <div class="loader"></div></div>
+    <header>
+        <!-- メニュー切り替えボタン -->
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="menu.svg" alt="Menu">
+        </button>
+        
+        <!-- ロゴ -->
+        <a href="index.html" class="top-right-image">
+            <img src="black_logo.svg" alt="logo">
+        </a>
+        
+        <!-- サイドバー -->
+        <nav class="sidebar-menu" id="sidebar-menu">
+            <!-- メニューを閉じるボタン -->
+            <button class="close-menu" id="close-menu">
+                <img src="close.svg" alt="Close Menu">
+            </button>
+            
+            <!-- 矢印 -->
+            <div id="arrow-container">
+                <img src="right_arrow.svg" alt="Right Arrow" class="arrow-right">
+            </div>
+
+            <!-- メニュー内のURL、コンテンツ -->
+            <div id="header"></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-header">プライバシーポリシー</h1>
+        <div class="privacy">
+            <p>HARULAB（以下，「私」といいます。）は，本ウェブサイト上で提供するサービスにおける，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシーを定めます。</p>
+            
+            <h2>第1条（個人情報）</h2>
+            <p>「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，
+                当該情報に含まれるソーシャルネットワーキングサービスのユーザーID，メールアドレス等の特定の個人を識別できる情報を指します。</p>
+            
+            <h2>第2条（個人情報の収集方法）</h2>
+            <p>
+                私は、ユーザーが制作依頼をする際にSNSのアカウントID、メールアドレス、お支払いの際に利用するサービスのユーザーID
+                などの個人情報をお尋ねすることがあります。
+            </p>
+            
+            <h2>第3条（個人情報を収集・利用する目的）</h2>
+            <p>私が個人情報を収集・利用する目的は，以下のとおりです。</p>
+            <ul>
+                <li>当サービスの提供・運営のため</li>
+                <li>ユーザーからのお問い合わせに回答するため</li>
+                <li>重要なお知らせなど必要に応じたご連絡のため</li>
+                <li>利用規約に違反したユーザーや，不正・不当な目的でサービスを利用しようとするユーザーの特定をし，ご利用をお断りするため</li>
+                <li>ユーザーにご自身の登録情報の閲覧や変更，削除，ご利用状況の閲覧を行っていただくため</li>
+                <li>有料サービスにおいて，ユーザーに利用料金を請求するため</li>
+            </ul>
+            
+            <h2>第4条（利用目的の変更）</h2>
+            <p>利用目的の変更を行った場合には，変更後の目的について，本ウェブサイト上に公表します。</p>
+            
+            <h2>第5条（個人情報の第三者提供）</h2>
+            <p>私は、ユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。ただし、個人情報保護法その他の法令で認められ
+                る場合を除きます。</p>
+            
+            <h2>第6条（個人情報の開示）</h2>
+            <p>私は、本人から個人情報の開示を求められたときは、本人に対し、遅滞なくこれを開示
+                します。</p>
+            
+            <h2>第7条（個人情報の訂正および削除）</h2>
+            <p>ユーザーは、当社の保有する自己の個人情報が誤った情報である場合には、個人情報の訂正、追加または削除を請求することができます。
+            
+            <h2>第8条（個人情報の利用停止等）</h2>
+            <p>
+                当社は、本人から、個人情報が、利用目的の範囲を超えて取り扱われているという理由、
+                または不正の手段により取得されたものであるという理由により、その利用の停止または
+                消去を求められた場合には、遅滞なく必要な調査を行います。
+            </p>
+    
+            <h2>第9条（お問い合わせ窓口）</h2>
+            <p>本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。</p>
+            <ul>
+                <li>Twitterのダイレクトメッセージ</li>
+                <li>Instagramのメッセージ</li>
+                <li>google form</li>
+    
+            </ul>
+        </div>
+        <script src="script.js"></script>
+            
+    </main>
+
+    <!-- スクリプト読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    body {
+    font-family: "Josefin Sans","Zen Kaku Gothic New";
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.privacy{
+    padding: 20px 10%;
+    font-family:"Noto Sans JP", sans-serif;
+}
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+        }
+h2 {
+    font-size: 1.5em;
+    margin-top: 50px;
+    font-weight: 500;
+    }
+p {
+    font-weight: 400;
+    }
+
+li{
+    font-weight: 400;
+}
+</style>

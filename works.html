@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <div id="head"></div>
+</head>
+<body>
+    <div class="loader-wrapper"> <div class="loader"></div></div>
+    <header>
+        <!-- メニュー切り替えボタン -->
+        <button class="menu-toggle" id="menu-toggle">
+            <img src="menu.svg" alt="Menu">
+        </button>
+        
+        <!-- ロゴ -->
+        <a href="index.html" class="top-right-image">
+            <img src="black_logo.svg" alt="logo">
+        </a>
+        
+        <!-- サイドバー -->
+        <nav class="sidebar-menu" id="sidebar-menu">
+            <!-- メニューを閉じるボタン -->
+            <button class="close-menu" id="close-menu">
+                <img src="close.svg" alt="Close Menu">
+            </button>
+            
+            <!-- 矢印 -->
+            <div id="arrow-container">
+                <img src="right_arrow.svg" alt="Right Arrow" class="arrow-right">
+            </div>
+
+            <!-- メニュー内のURL、コンテンツ -->
+            <div id="header"></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="section-header">Works</h1>
+
+        <!-- ボタンコンテナ -->
+        <div class="buttons-container">
+            <div class="buttons">
+                <button class="custom-button" onclick="filterCards('all')">All</button>
+                <button class="custom-button" onclick="filterCards('mv')">MV</button>
+                <button class="custom-button" onclick="filterCards('fanart')">Fanart</button>
+                <button class="custom-button" onclick="filterCards('music')">Music</button>
+            </div>
+        </div>
+
+        <div id="works_grit"></div>  
+    </main>
+
+    <!-- スクリプト読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+  <!-- コンテンツカード -->
+  <div class="container">
+    <div class="card mv" onclick="openModal('https://www.youtube.com/embed/_OzS56neRFs', 'MVの詳細1')">
+        <img src="https://img.youtube.com/vi/_OzS56neRFs/maxresdefault.jpg" alt="Image 1">
+        <h2>Motion REEL 2023</h2>
+        <p>詳細テキスト1 (MV)</p>
+        <span class="date">2024-07-01</span>
+    </div>
+    
+    <div class="card fanart" onclick="openModal('https://www.youtube.com/embed/wrpKJBB3g6E', 'fanartの詳細2')">
+        <img src="https://img.youtube.com/vi/wrpKJBB3g6E/maxresdefault.jpg" alt="Image 2">
+        <h2>オーバレイワールド</h2>
+        <p>詳細テキスト2 (fanart)</p>
+        <span class="date">2024-07-02</span>
+    </div>
+    
+    <div class="card music" onclick="openModal('https://www.youtube.com/embed/VIDEO_ID', 'Musicの詳細3')">
+        <img src="https://via.placeholder.com/300x200" alt="Image 3">
+        <h2>タイトル3 (Music)</h2>
+        <p>詳細テキスト3 (Music)</p>
+        <span class="date">2024-07-03</span>
+    </div>
+</div>
+
+  <!-- モーダル -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+        <img src="close.svg" alt="logo" class="modal-logo" onclick="closeModal()">
+        <iframe id="modalVideo" width="100%" height="400" src="" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <div id="videoDetails"></div>
+    </div>
+</div>
+
