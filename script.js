@@ -124,6 +124,42 @@ window.addEventListener('scroll', function() {
 
 
 
+function calculateBudget() {
+    const plan = document.getElementById('plan').value;
+    let basePrice = 0;
 
+    if (plan === 'basic') {
+        basePrice = 4000;
+    } else if (plan === 'normal') {
+        basePrice = 10000;
+    } else if (plan === 'premium') {
+        basePrice = 20000;
+    }
 
+    const deadline = parseInt(document.getElementById('deadline').value);
+    let deadlinePrice = 0;
+
+    if (deadline === 1) {
+        deadlinePrice = 1000;
+    } else if (deadline === 2) {
+        deadlinePrice = 500;
+    }
+
+    const illustration = parseInt(document.getElementById('illustration').value);
+    let illustrationPrice = 0;
+
+    if (!isNaN(illustration)) {
+        illustrationPrice = illustration * 500;
+    }
+
+    const background = document.getElementById('background').value;
+    let backgroundPrice = 0;
+
+    if (background === 'yes') {
+        backgroundPrice = -1000;
+    }
+
+    const totalBudget = basePrice + deadlinePrice + illustrationPrice + backgroundPrice;
+    document.getElementById('result').textContent = `予想金額：${totalBudget}円`;
+}
 
